@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home > Our Facilities</title>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon/favicon2.png"
+      type="image/x-icon"
+    />
+    <!--파비콘 넣는 방법 link favicon-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      section {
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      .title {
+        /* background-color: tomato; */
+        width: 80%;
+        margin: 0 auto; /*사각형 가운데 정렬*/
+        text-align: center;
+      }
+      .title h3 {
+        font-size: 30px;
+        text-transform: uppercase;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+      }
+      .content p {
+        color: rgba(0, 0, 0, 0.4);
+      }
+      .content {
+        /* background-color: aqua; */
+        width: 80%;
+        margin: 0 auto;
+      } /*일단 색을 먼저 넣어서 틀 먼저 잡기!!*/
+
+      .contents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 100px;
+      }
+      .content-box {
+        /* background-color: antiquewhite; */
+        width: 32%;
+
+        /* background-color: red; */
+      }
+      .content-box-img {
+        width: 100%;
+        overflow: hidden;
+      }
+      .content-box-img img:hover {
+        transform: scale(1.2);
+        /* 부드럽게 처리 ->속도s */
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      .content-box-text h4 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .content-box-text p {
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* mobile query css start : 500px */
+      @media (max-width: 500px) {
+        section {
+          margin: 0 auto;
+        }
+        header {
+          text-align: center;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        .title {
+          /* background-color: tomato; */
+          width: 80%;
+          margin: 0 auto; /*사각형 가운데 정렬*/
+          text-align: center;
+        }
+        .title h3 {
+          font-size: 30px;
+          text-transform: uppercase;
+          text-transform: capitalize;
+          margin-bottom: 30px;
+        }
+        .content p {
+          color: rgba(0, 0, 0, 0.4);
+        }
+        .content {
+          /* background-color: aqua; */
+          width: 80%;
+          margin: 0 auto;
+          min-width: ;
+        } /*일단 색을 먼저 넣어서 틀 먼저 잡기!!*/
+
+        .contents {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0 100px;
+        }
+        .content-box {
+          /* background-color: antiquewhite; */
+          width: 32%;
+
+          /* background-color: red; */
+        }
+        .content-box-img {
+          width: 100%;
+          overflow: hidden;
+        }
+        .content-box-img img:hover {
+          transform: scale(1.2);
+          /* 부드럽게 처리 ->속도s */
+          transition: 0.5s;
+          cursor: pointer;
+        }
+        .content-box-text h4 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+        }
+        .content-box-text p {
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+      /* mobile css end */
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <div class="title">
+          <h3>Our Facilities</h3>
+        </div>
+        <div class="content">
+          <p>
+            The GNU General Public License is a free, copyleft license for
+            software and other kinds of works.<br />
+            The licenses for most software and other practical works are
+            designed to take away your freedom to share and change the works.
+          </p>
+        </div>
+      </header>
+      <div class="contents">
+        <div class="content-box">
+          <div class="content-box-img">
+            <a
+              href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=C498745007"
+              target="_blank"
+            >
+              <img src="./images/f1.jpg" alt=""
+            /></a>
+          </div>
+
+          <div class="content-box-text">
+            <h4>World Class Library</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+              vero cum eligendi perspiciatis assumenda modi.
+            </p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="content-box-img">
+            <a
+              href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=C498745007"
+              target="_blank"
+            >
+              <img src="./images/f2.jpg" alt=""
+            /></a>
+          </div>
+
+          <div class="content-box-text">
+            <h4>World Class Library</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+              vero cum eligendi perspiciatis assumenda modi.
+            </p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="content-box-img">
+            <a
+              href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=C498745007"
+              target="_blank"
+            >
+              <img src="./images/f3.jpg" alt=""
+            /></a>
+          </div>
+
+          <div class="content-box-text">
+            <h4>World Class Library</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+              vero cum eligendi perspiciatis assumenda modi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

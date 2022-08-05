@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+    .box1 {
+      width:100%;
+      height:100px;
+      background-color: tomato;
+    }
+
+    .box2 {
+      width:100%;
+      height:100px;
+      background-color: blue;
+    }
+
+    .openNclose {
+      display:none;
+    }
+
+    input[type="text"] {
+      border:1px solid #d1d1d1;
+      width:250px;
+      height:35px;
+      border-radius: 2px;
+      font-size:14px;
+      font-family: 'Nanum Gothic', sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .chkBtn {
+      border:1px solid #d1d1d1;
+      padding:10px 8px;
+      border-radius: 2px;
+      font-size:14px;
+      font-family: 'Nanum Gothic', sans-serif;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      margin-left:-4px;
+    }
+
+    .text {
+      color:red;
+      font-weight: bold;
+    }
+
+    input[type="checkbox"] {
+      border:1px solid #d1d1d1;
+      width:20px;
+      height:20px;
+      border-radius: 2px;
+      font-size:14px;
+      font-family: 'Nanum Gothic', sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .navbar-wrap ul {
+      display: none;
+    }
+
+    .navbar-wrap ul.onoff {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1" id="box1">box1</div>
+  <button class="open" id="open" onClick="openMenu();">open</button>
+  <button class="close" id="close" onClick="closeMenu();">close</button>
+  <p></p>
+  <hr>
+  <p></p>
+  <div class="box2" id="box2">box1</div>
+  <button class="toggle" id="toggle">toggle</button>
+  <p></p>
+  <hr>
+  <p></p>
+  <div class="login-box">
+    <input type="text" name="userid" class="userid" id="userid" placeholder="아이디를 입력하세요">
+    <button type="button" class="chkBtn" id="chkBtn">아이디체크</button>
+    <div class="text" id="text"></div>
+  </div>
+  <p></p>
+  <hr>
+  <p></p>
+  <table>
+    <tr>
+      <td><input type="checkbox" id="chkAll" onClick="selectAll();">전체선택</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" id="chk"></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" id="chk"></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" id="chk"></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" id="chk"></td>
+    </tr>
+  </table>
+  <p></p>
+  <hr>
+  <p></p>
+  <div class="navbar-wrap" id="navbar-wrap">
+    <h1>logo</h1>
+    <ul>
+      <li><a href="">Menu01</a></li>
+      <li><a href="">Menu01</a></li>
+      <li><a href="">Menu01</a></li>
+    </ul>
+  </div>
+  <button type="button" class="navBtn" id="navBtn">Trigger</button>
+  <p></p>
+  <hr>
+  <p></p>
+
+  
+  <script>
+    function openMenu() {
+      // alert('open');
+      //document.getElementById('box1').style.display = 'block';
+      //document.querySelector('#box1').style.display = 'block';
+    }
+
+    function closeMenu() {
+      // alert('close');
+      //document.getElementById('box1').style.display = 'none';
+      //document.querySelector('#box1').style.display = 'none';
+    }
+
+    const openMenuEventType = () => {
+      // alert('openEvent');
+      document.querySelector('#box1').classList.remove('openNclose');
+    }
+
+    const closeMenuEventType = () => {
+      // alert('closeEvent');
+      document.querySelector('#box1').classList.add('openNclose');
+    }
+
+    document.querySelector('#open').addEventListener('click', openMenuEventType);
+    document.querySelector('#close').addEventListener('click', closeMenuEventType);
+
+    const showToggle = () => {
+      document.querySelector('#box2').classList.toggle('openNclose');
+    }
+    //document.querySelector('#toggle').addEventListener('click', showToggle);
+    document.querySelector('#toggle').addEventListener('click', () => {
+      document.querySelector('#box2').classList.toggle('openNclose');
+    });
+    
+
+    document.querySelector('#chkBtn').addEventListener('click', () => {
+      //alert('idCheck..');
+      //alert(document.querySelector('#userid').value);
+      //alert(document.getElementById('userid').value);
+
+      if(document.querySelector('#userid').value === '') {
+        alert('아이디를 입력하세요.');
+        document.querySelector('#userid').value = '';
+        document.querySelector('#userid').focus();
+
+      }else if( document.querySelector('#userid').value === '12345' ) {
+        alert('로그인 되었습니다.');
+        location.href = 'https://www.naver.com';
+
+      }else{
+        document.querySelector('#text').innerHTML = '아이디가 일치하지 않습니다.';
+        document.querySelector('#userid').value = '';
+        document.querySelector('#userid').focus();
+      }
+    });
+
+    function selectAll() {
+      //alert('aaa');
+      const str = document.querySelectorAll('#chk');
+      if( document.querySelector('#chkAll').checked == true ) {
+        for(let i = 0; i < str.length; i++) {
+          str[i].checked = true;
+        }
+      }else{
+        for(let i = 0; i < str.length; i++) {
+          str[i].checked = false;
+        }
+      }
+    }
+
+    function navToggle() {
+      //alert('aaa');
+      document.querySelector('#navbar-wrap ul').classList.toggle('onoff');
+    }
+
+   
+    document.querySelector('#navBtn').addEventListener('click', navToggle);
+  </script>
+</body>
+</html>

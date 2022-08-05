@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>객실 좌석 배치도</h2>
+    <!-- document.write 로 테이블 배치 -->
+    <script>
+      let members = prompt("객실 정원을 입력하세요.");
+      let seats = prompt("객실 한줄에 몇 명씩 앉나요?");
+
+      let rows = "";
+
+      if (members % seats == 0) {
+        rows = members / seats;
+      } else {
+        rows = members / seats + 1;
+      }
+      /**/
+
+      document.write("<table border=1>");
+      for (let i = 0; i < rows; ++i) {
+        document.write("<tr>");
+        for (let j = 1; j < seats; ++j) {
+          let seatNo = i * seats + j;
+          if (seatNo > members) break;
+          document.write("<td>");
+          document.write(`좌석 :${seatNo}`);
+          document.write("</td>");
+        }
+        document.write("</tr>");
+        document.write("</table>");
+      }
+    </script>
+  </body>
+</html>

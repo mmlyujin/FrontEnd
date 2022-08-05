@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      tr {
+        height: 40px;
+      }
+
+      td {
+        border: 3px solid transparent;
+      }
+      tr:first-child {
+        height: 1px;
+      }
+      tr:nth-child(2) {
+        background-color: #ccc;
+      }
+      .page-button {
+        display: inline-block;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        width: 30px;
+        height: 30px;
+        padding-left: 10px;
+        cursor: pointer;
+      }
+      .page-button:hover {
+        color: #fff;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-box">
+      <p>Home>Group>Board Name</p>
+      <select name="search">
+        <option value="search1">검색조건</option>
+        <option value="title">글 제목</option>
+        <option value="date">작성일</option>
+      </select>
+      <input type="text" />
+      <button type="submit">Search</button>
+    </div>
+    <div class="table-wrap">
+      <table class="tb-box">
+        <tr>
+          <td style="background-color: black" colspan="5"></td>
+          <!-- <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td> -->
+        </tr>
+        <tr>
+          <td>No.</td>
+          <td>Subject</td>
+          <td>Name</td>
+          <td>Registraion Date</td>
+          <td>Count</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>게시판 테스트입니다.</td>
+          <td>관리자</td>
+          <td>2022.07.11</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>게시판 테스트입니다.</td>
+          <td>관리자</td>
+          <td>2022.07.11</td>
+          <td>1</td>
+        </tr>
+      </table>
+    </div>
+    <div class="bottom-box">
+      <div class="page-button-wrap">
+        <span class="page-button"><</span><span class="page-button">1</span
+        ><span class="page-button">2</span><span class="page-button">3</span
+        ><span class="page-button">4</span><span class="page-button">></span>
+      </div>
+    </div>
+  </body>
+</html>

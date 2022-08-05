@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+           1.회원가입 객체생성 : 여러 명 -> user_insert
+               -세부정보 : html 작업할 때 없어도 id 설정(primary key)
+                           -중복되면 x, 숫자 형태
+                -userid(S) - 사용자 아이디
+                -passwd(S) - 사용자 비밀번호
+                -username(S) - 사용자 이름
+       */
+
+      /*html 폼에서 넘어 오는 변수 값*/
+      /*
+         const user_insert = {
+           id: 1,
+           userid: "busanit",
+           passwd: "12345",
+           username: "정유진",
+         };
+
+         if (user_insert.userid === "busanit" && user_insert.passwd === "12345") {
+           console.log("로그인 되었습니다.");
+         } else {
+           console.log("아이디와 비밀번호를 확인해주세요.");
+         }
+         */
+
+      const user_insert = [
+        {
+          id: 1,
+          userid: "ruby",
+          passwd: "12345",
+        },
+        {
+          id: 2,
+          userid: "danbi",
+          passwd: "123456",
+        },
+        {
+          id: 3,
+          userid: "coco",
+          passwd: "1234567",
+        },
+        {
+          id: 4,
+          userid: "momo",
+          passwd: "1234",
+        },
+      ];
+
+      console.log(user_insert[0].userid);
+      console.log(user_insert[1].userid);
+      console.log(user_insert[2].userid);
+
+      const { id, passwd } = user_insert[2];
+      console.log(`${id} - ${passwd}`);
+
+      console.log(JSON.stringify(user_insert, null, 2));
+
+      /*
+           데이터 전체 출력: loop
+           - for(초기값,조건,증감값) {}
+           - 배열이름.forEach((별명) => {});
+       */
+      /*
+      for (let i = 0; i < user_insert.length; i++) {
+        console.log(user_insert[i]);
+        console.log(user_insert[i].id);
+        console.log(user_insert[i].userid);
+        console.log(user_insert[i].passwd);
+      }
+      */
+
+      //자바스크립트{} ->중괄호는 데이터 2개 이상일 때 {}
+      /*
+      user_insert.forEach((user) => {
+        console.log(user);
+        console.log(user.id);
+        console.log(user.userid);
+        console.log(user.passwd);
+      });
+      */
+    </script>
+  </body>
+</html>

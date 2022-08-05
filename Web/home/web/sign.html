@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #ccc;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      button {
+        border: 0;
+        outline: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      .sign_box {
+        border: 1px solid rgba(34, 36, 38, 0.2);
+        padding: 40px 50px;
+        border-radius: 7px;
+        background-color: white;
+        box-shadow: 0 0 10px 3px pink;
+        width: 500px;
+      }
+      input {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        width: 350px;
+        height: 40px;
+        outline: none;
+      }
+      .username-wrap,
+      .iden-wrap,
+      .pwd-wrap,
+      .re-pwd-wrap {
+        margin-bottom: 15px;
+      }
+      p {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      button {
+        float: right;
+        width: 130px;
+        height: 40px;
+        background-color: tomato;
+        margin-right: 45px;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+      button:hover {
+        border: 1px solid tomato;
+        color: black;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sign_box">
+        <h1 style="margin-bottom: 20px">
+          <i class="fa-solid fa-circle-user"></i>&nbsp;Sign In
+        </h1>
+        <form class="sign-box" action="login.html">
+          <div class="username-wrap">
+            <p>User name</p>
+            <input type="text" placeholder="&nbsp;user name" />
+          </div>
+          <div class="iden-wrap">
+            <p>Identification</p>
+            <input type="text" placeholder="&nbsp;identification" />
+          </div>
+          <div class="pwd-wrap">
+            <p>Password</p>
+            <input type="password" placeholder="&nbsp;password" />
+          </div>
+          <div class="re-pwd-wrap">
+            <p>Re-Password</p>
+            <input type="password" placeholder="&nbsp;re-password" />
+          </div>
+          <div class="link_container">
+            <a href="#"><strong>Always registered sign in?</strong></a>
+          </div>
+          <button class="button-box" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

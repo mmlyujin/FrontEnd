@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .content-size {
+        /* 400*3 + 20 = 1220 */
+        width: 1220px;
+        margin: 0 auto;
+      }
+      .title {
+      }
+      h2 {
+        /* background-color: red; */
+        text-align: center;
+      }
+      .list_wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      img {
+        /*이미지에 미리 max-width 100을 주면 나중에 박스 크기를 정하고 거기에 맞게 이미지가 100% 찬다.*/
+        max-width: 100%;
+      }
+      .list_item {
+        width: 400px;
+        /* background-color: tomato; */
+        margin-bottom: 10px;
+      }
+      .list_img {
+        /*overflow는 이미지가 튀어나가지 않으면 좋겠는 딱 그 사이즈의 박스에 스타일을 준다.*/
+        overflow: hidden;
+      }
+      .list_img img {
+        transition: all 0.2s linear;
+      }
+      .list_img img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="content-size">
+      <div class="title">
+        <h2>Shop</h2>
+      </div>
+      <div class="list_wrap">
+        <div class="list_item">
+          <div class="list_img"><img src="./images/bag1.jpg" alt="" /></div>
+          <div class="list_text">forest</div>
+        </div>
+        <div class="list_item">
+          <div class="list_img"><img src="./images/idhoodie.jpg" alt="" /></div>
+          <div class="list_text">Lake</div>
+        </div>
+        <div class="list_item">
+          <div class="list_img"><img src="./images/idsocks.jpg" alt="" /></div>
+          <div class="list_text">Sky</div>
+        </div>
+        <div class="list_item">
+          <div class="list_img"><img src="./images/f1.jpg" alt="" /></div>
+          <div class="list_text">forest</div>
+        </div>
+        <div class="list_item">
+          <div class="list_img"><img src="./images/f2.jpg" alt="" /></div>
+          <div class="list_text">forest</div>
+        </div>
+        <div class="list_item">
+          <div class="list_img"><img src="./images/f3.jpg" alt="" /></div>
+          <div class="list_text">forest</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

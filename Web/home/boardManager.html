@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Nanum Gothic", sans-serif;
+        font-size: 14px;
+      }
+      .en {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      table {
+        width: 100%; /*테이블 초기화 값*/
+        border-collapse: collapse;
+      }
+      .board-wrap {
+        padding: 20px;
+      }
+      .top-wrap {
+        margin: 10px 0;
+      }
+      .top-wrap p {
+        font-weight: bold;
+      }
+      input,
+      button,
+      select {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        font-size: 12px;
+      }
+      tr {
+        height: 50px;
+      }
+      tr:first-child {
+        height: 3px;
+      }
+      tr:nth-child(2) {
+        background-color: #eee;
+        font-weight: bold;
+      }
+      td:nth-child(3) {
+        font-weight: bold;
+        color: blue;
+      }
+      select {
+        width: 80%;
+      }
+      .bottom-wrap {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #eee;
+      }
+      .paging {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 10px;
+      }
+      .paging div {
+        width: 30px;
+        height: 30px;
+        /* border: 1px solid rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+      }
+      .paging div:hover {
+        background-color: #fff;
+      }
+      .paging div:nth-child(1) {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 0px solid rgba(0, 0, 0, 0.1);
+      }
+      .paging div:nth-child(2) {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 0px solid rgba(0, 0, 0, 0.1);
+      }
+      .paging div:nth-child(3) {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 0px solid rgba(0, 0, 0, 0.1);
+      }
+      .paging div:nth-child(4) {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 0px solid rgba(0, 0, 0, 0.1);
+      }
+      .paging div:nth-child(5) {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 0px solid rgba(0, 0, 0, 0.1);
+      }
+      .paging div:nth-child(6) {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .bottom-wrap .btn {
+        display: flex;
+        background-color: dodgerblue;
+        width: 100px;
+        height: 30px;
+        align-items: center;
+        padding-left: 8px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      .bottom-wrap .btn:hover {
+        border: 1px solid dodgerblue;
+        color: #000;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board-wrap">
+      <div class="top-wrap">
+        <p>Home > Notice > Boardlistshowall</p>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <tr>
+            <td style="background-color: rgb(135, 162, 235)" colspan="6"></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" />No.</td>
+            <td>Subject</td>
+            <td style="color: #000">Name</td>
+            <td>Registraion Date</td>
+            <td>Reply</td>
+            <td>Colors</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" />5</td>
+            <td>
+              <form method="post" name="sub">
+                <select>
+                  <option>subject</option>
+                  <option value="f1">first</option>
+                  <option value="f2">second</option>
+                </select>
+              </form>
+            </td>
+            <td>비즈니스 답변형 게시판</td>
+            <td>2022.07.13</td>
+            <td>
+              <form method="post" name="rep">
+                <select>
+                  <option>no</option>
+                  <option value="r1">yes</option>
+                </select>
+              </form>
+            </td>
+            <td>
+              <form method="post" name="last">
+                <select>
+                  <option>#cccccc</option>
+                  <option value="r1">#ffffff</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" />4</td>
+            <td>
+              <form method="post" name="sub">
+                <select>
+                  <option>subject</option>
+                  <option value="f1">first</option>
+                  <option value="f2">second</option>
+                </select>
+              </form>
+            </td>
+            <td>비즈니스 답변형 게시판</td>
+            <td>2022.07.12</td>
+            <td>
+              <form method="post" name="rep">
+                <select>
+                  <option>no</option>
+                  <option value="r1">yes</option>
+                </select>
+              </form>
+            </td>
+            <td>
+              <form method="post" name="last">
+                <select>
+                  <option>#cccccc</option>
+                  <option value="r1">#ffffff</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" />3</td>
+            <td>
+              <form method="post" name="sub">
+                <select>
+                  <option>subject</option>
+                  <option value="f1">first</option>
+                  <option value="f2">second</option>
+                </select>
+              </form>
+            </td>
+            <td>비즈니스 답변형 게시판</td>
+            <td>2022.07.11</td>
+            <td>
+              <form method="post" name="rep">
+                <select>
+                  <option>no</option>
+                  <option value="r1">yes</option>
+                </select>
+              </form>
+            </td>
+            <td>
+              <form method="post" name="last">
+                <select>
+                  <option>#cccccc</option>
+                  <option value="r1">#ffffff</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" />2</td>
+            <td>
+              <form method="post" name="sub">
+                <select>
+                  <option>subject</option>
+                  <option value="f1">first</option>
+                  <option value="f2">second</option>
+                </select>
+              </form>
+            </td>
+            <td>비즈니스 답변형 게시판</td>
+            <td>2022.07.10</td>
+            <td>
+              <form method="post" name="rep">
+                <select>
+                  <option>no</option>
+                  <option value="r1">yes</option>
+                </select>
+              </form>
+            </td>
+            <td>
+              <form method="post" name="last">
+                <select>
+                  <option>#cccccc</option>
+                  <option value="r1">#ffffff</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" />1</td>
+            <td>
+              <form method="post" name="sub">
+                <select>
+                  <option>subject</option>
+                  <option value="f1">first</option>
+                  <option value="f2">second</option>
+                </select>
+              </form>
+            </td>
+            <td>비즈니스 답변형 게시판</td>
+            <td>2022.07.09</td>
+            <td>
+              <form method="post" name="rep">
+                <select>
+                  <option>no</option>
+                  <option value="r1">yes</option>
+                </select>
+              </form>
+            </td>
+            <td>
+              <form method="post" name="last">
+                <select>
+                  <option>#cccccc</option>
+                  <option value="r1">#ffffff</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bottom-wrap">
+        <div class="paging">
+          <div class="left-arrow"><i class="fa-solid fa-angle-left"></i></div>
+          <div class="number">1</div>
+          <div class="number">2</div>
+          <div class="number">3</div>
+          <div class="number">4</div>
+          <div class="right-arrow"><i class="fa-solid fa-angle-right"></i></div>
+        </div>
+        <div class="btn" style="font-weight: bold">
+          <i class="fa-solid fa-pencil"></i>&nbsp;
+          <p>AddBoard</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

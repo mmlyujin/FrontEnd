@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.write</title>
+  </head>
+  <body>
+    <h2>Welcome Hello World</h2>
+    <script>
+      /*
+      let username =
+        prompt(
+          "이름을 입력하세요."
+        ); 화면에 글자를 입력해야하는 팝업창이 뜬다.
+      document.write(username + "님 환영합니다!"); 입력칸에 쓴 글자와 함께 화면에 글자가 나타난다.
+      document.write(`안녕하세요. <strong>${username}</strong>님 환영합니다!`);*/
+
+      /*
+      //짝수홀수출력;
+      let numbers = prompt("숫자를 입력하세요.");
+      //alert(typeof numbers); <-입력값의 타입
+      switch (numbers % 2) {
+        case 0:
+          document.write("짝수입니다.");
+          break;
+
+        case 1:
+          document.write("홀수입니다.");
+          break;
+
+        default:
+          document.write("유효한 숫자가 아닙니다.");
+          break;
+      }*/
+
+      let numbers = Number(prompt("숫자를 입력하세요."));
+      //0보다 크면 양수 ,미만 음수 (?조건)
+      let result = numbers >= 0 ? "양수" : "음수"; //true면 :앞의 값 출력
+      document.write(result);
+    </script>
+  </body>
+</html>

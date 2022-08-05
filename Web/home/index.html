@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu Responsive</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&family=Lato&family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .kristi-font {
+      font-family: "Kristi", cursive;
+    }
+    .lato-font {
+      font-family: "Lato", sans-serif;
+    }
+    .lora-font {
+      font-family: "Lora", serif;
+    }
+    ul li {
+      list-style: none; /*점 없애기*/
+    }
+    a {
+      color: #222;
+      text-decoration: none; /*링크 밑줄없애기*/
+    }
+    /*여기까지는 reset*/
+
+    .hero-bg {
+      background-image: url(./images/pc-img.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #ccc;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-wrap {
+      position: absolute; /*페이지 모서리 기준으로*/
+      top: 0;
+      left: 5%;
+      right: 5%;
+      width: 90%;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-wrap h1 {
+      color: tomato;
+    }
+    .nav-menu ul {
+      display: flex;
+      flex-direction: row;
+    }
+    .nav-menu ul li a {
+      margin-left: 10px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .nav-menu ul li a:hover {
+      color: tomato;
+      transition: 0.3s;
+    }
+    .hero-content h2 {
+      font-size: 100px;
+    }
+
+    .hero-content h2,
+    .hero-content p {
+      text-align: center;
+    }
+    .showBtn i {
+      display: none;
+    }
+
+    /* pc css end */
+
+    /* tap css start */
+    @media (max-width: 1000px) {
+      .hero-bg {
+        background-image: url(./images/tap-img.jpg);
+        display: flex;
+        justify-content: row;
+        align-items: center;
+      }
+
+      .top-wrap {
+        position: absolute; /*페이지 모서리 기준으로*/
+        top: 0;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .top-wrap h1 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      .nav-menu ul {
+        display: flex;
+        flex-direction: row;
+      }
+      .nav-menu ul li a {
+        margin-left: 10px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.7);
+      }
+      .nav-menu ul li a:hover {
+        color: tomato;
+        transition: 0.3s;
+      }
+
+      .hero-content h2 {
+        font-size: 80px;
+      }
+      .hero-content h2,
+      .hero-content p {
+        text-align: center;
+      }
+    }
+    /* tap css end */
+
+    /*mobile css start */
+    @media (max-width: 500px) {
+      .hero-bg {
+        background-image: url(./images/mobile-img.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .top-wrap {
+        position: absolute; /*페이지 모서리 기준으로*/
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .top-wrap h1 {
+        color: tomato;
+        margin-top: 12%;
+        margin-left: 5%;
+      }
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+      }
+      .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+      }
+      .nav-menu ul li {
+        padding: 15px 0;
+      }
+      .nav-menu ul li a {
+        margin-left: 10px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.7);
+      }
+      .nav-menu ul li a:hover {
+        color: tomato;
+        transition: 0.3s;
+      }
+      .showBtn {
+        position: absolute;
+        top: 5%;
+        right: 5%; /*모서리기준 위에서 오른쪽*/
+      }
+      .showBtn i {
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .hero-content h2 {
+        font-size: 60px;
+      }
+      .hero-content p {
+        font-size: 10px;
+      }
+      .hero-content h2,
+      .hero-content p {
+        text-align: center;
+      }
+      .showBtn i {
+        display: block;
+      }
+      .open {
+        display: block;
+      }
+    }
+    /*mobile css end */
+  </style>
+  <body>
+    <div class="hero-bg">
+      <div class="top-wrap">
+        <h1 class="logo">TASTY</h1>
+        <div class="nav-menu" id="nav-menu">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">RESTO</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">SPECIAL</a></li>
+            <li><a href="#">RESERVATION</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="login.html">ADMIN</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="showBtn" id="showBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="hero-content">
+        <h2 class="hero-title kristi-font">delicious italian food</h2>
+        <p class="hero-pra lora-font" style="letter-spacing: 2px">
+          Making delicious italian food since 1997
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 1.변수
+    //2.동작
+    const showMenu = () => {
+      document.getElementById("nav-menu").classList.toggle("open");
+    }; /*showMenu = document에서 id가져와라 ->nav-menu -> 클래스 open을 toggle처리(on,off).*/
+
+    // 3.이벤트
+    document.querySelector("#showBtn i").addEventListener("click", showMenu);
+    /*showBtn i를-> click이벤트 설정(누를 때) -> showMenu(함수)를!*/
+  </script>
+</html>

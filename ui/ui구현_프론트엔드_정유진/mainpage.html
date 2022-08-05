@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COCO Main page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      ul li {
+        list-style: none;
+      }
+      button {
+        border: none;
+        background-color: transparent;
+      }
+      /* ============reset=============  */
+
+      body {
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        height: 100%;
+      }
+      /* 헤더 부분 시작 */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .logo {
+        margin-left: 30px;
+      }
+      h1 {
+        font-family: "Pacifico", cursive;
+        color: rosybrown;
+        font-size: 40px;
+      }
+      .right_menu {
+        margin-right: -680px;
+      }
+      .right_menu ul {
+        display: flex;
+        margin-right: 30px;
+      }
+      .right_menu ul li {
+        margin-right: 10px;
+      }
+      .right_menu ul li a {
+        font-size: 14px;
+      }
+      .right_menu ul li a:hover {
+        color: rosybrown;
+        transition: 0.3s;
+      }
+      .showBtn i {
+        display: none;
+      }
+      /* 헤더 부분 끝 */
+
+      /* 메뉴 버튼 부분 시작 */
+      .menuButton_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1280px;
+        /* height: 70px; */
+        flex-wrap: wrap;
+        margin: 30px 0;
+      }
+      button {
+        height: 50px;
+        font-size: 16px;
+      }
+      button a {
+        padding: 40px;
+        font-weight: bold;
+      }
+      button a:hover {
+        color: rosybrown;
+        transition: 0.3s;
+      }
+      /* 메뉴 버튼 부분 끝*/
+
+      /* 메인 이미지 부분 */
+
+      .dog_eating {
+        background-image: url(./images/dogeating01.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #fff;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-bottom: 50px;
+        cursor: pointer;
+      }
+      .dog_sleeping {
+        background-image: url(./images/dogsleeping.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #fff;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-bottom: 50px;
+        cursor: pointer;
+      }
+      .dog_harness {
+        background-image: url(./images/dogharness3.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #fff;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        cursor: pointer;
+      }
+      .image_text_box {
+        color: #fff;
+        margin-right: 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 15px;
+      }
+      .image_text_01 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .hr {
+        width: 65%;
+        margin-top: 10px;
+      }
+
+      .image_text_02 {
+        margin-top: 40px;
+        font-size: 18px;
+      }
+      /*메인 이미지 부분 end */
+
+      /* =======footer start========== */
+      .footer {
+        max-width: 100vw;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+      }
+      .footer_text_box {
+        width: 500px;
+      }
+      .footer_text_wrap {
+        margin-top: 20px;
+      }
+      .footer_top_text {
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+      }
+      .footer_top_text ul {
+        display: flex;
+        margin-right: 30px;
+      }
+
+      .footer_top_text ul li {
+        margin-right: 10px;
+      }
+      .footer_top_text ul li a {
+        font-size: 14px;
+      }
+      .footer_top_text ul li a:hover {
+        color: rosybrown;
+        transition: 0.3s;
+      }
+      .footer_bottom_text {
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+      }
+      .footer_bottom_text p {
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+      /* ===footer end==== */
+      /* =========pc css end======== */
+
+      /* ======미디어쿼리=================== */
+      @media (max-width: 650px) {
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 30px;
+          height: 140px;
+        }
+        .logo {
+          margin-left: 30px;
+        }
+        h1 {
+          font-family: "Pacifico", cursive;
+          color: rosybrown;
+          font-size: 35px;
+        }
+        .right_menu {
+          display: none;
+        }
+        .right_menu ul {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+          margin: 20px;
+          width: 200px;
+        }
+        .right_menu ul li {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        .right_menu ul li a {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        ul li a:hover {
+          color: rosybrown;
+          transition: 0.3s;
+        }
+
+        .showBtn i {
+          font-size: 25px;
+          cursor: pointer;
+          color: #000;
+          margin-right: 20px;
+        }
+        .showBtn i {
+          display: block;
+        }
+        .open {
+          display: block;
+        }
+        .footer_text_box ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <h1><i class="fa-solid fa-paw"></i>&nbspCOCO</h1>
+        </div>
+        <div class="right_menu" id="right_menu">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="./loginpage.html">로그인</a></li>
+            <li><a href="./signinpage.html">회원가입</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">주문조회</a></li>
+            <li>
+              <a href="#">장바구니<i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="showBtn" id="showBtn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <!-- 메인페이지시작 -->
+      <div class="main">
+        <div class="menuButton_wrap">
+          <span>
+            <button><a href="#">New</a></button></span
+          >
+          <span
+            ><button><a href="./dogfoodpage.html">푸드</a></button></span
+          ><span
+            ><button><a href="#">리빙</a></button></span
+          ><span
+            ><button><a href="#">장난감</a></button></span
+          ><span
+            ><button><a href="#">훈련용품</a></button></span
+          ><span
+            ><button><a href="#">야외용품</a></button> </span
+          ><span
+            ><button>
+              <a href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a></button
+          ></span>
+        </div>
+        <div class="main_image_container">
+          <div class="dog_eating">
+            <div class="image_text_box">
+              <div class="image_text_01"><p>코코 수제 간식</p></div>
+              <div class="hr"><hr /></div>
+              <div class="image_text_02">
+                <p>강아지에게 좋은 간식을 선물하세요</p>
+              </div>
+            </div>
+          </div>
+          <div class="dog_sleeping">
+            <div class="image_text_box">
+              <div class="image_text_01"><p>코코 방석</p></div>
+              <div class="hr"><hr /></div>
+              <div class="image_text_02">
+                <p>강아지의 꿀잠을 위한 편안한 방석</p>
+              </div>
+            </div>
+          </div>
+          <div class="dog_harness">
+            <div class="image_text_box">
+              <div class="image_text_01"><p>코코 하네스</p></div>
+              <div class="hr"><hr /></div>
+              <div class="image_text_02">
+                <p>강아지에게 편안하고 튼튼한 하네스</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 베스트셀러,고객센터안내,1:1문의 -->
+
+      <!-- footer 시작 -->
+      <div class="footer">
+        <div class="footer_text_box">
+          <div class="footer_text_wrap">
+            <div class="footer_top_text">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">제휴/도매/총판 문의</a></li>
+                <li><a href="#">채용공고</a></li>
+                <li><a href="#">고객센터</a></li>
+              </ul>
+            </div>
+            <div class="footer_bottom_text">
+              <p>코코컴퍼니</p>
+              <p>대표:정유진</p>
+              <p>사업자등록번호:123-4567-8910</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer 끝 -->
+    </div>
+
+    <script>
+      const showMenu = () => {
+        document.getElementById("right_menu").classList.toggle("open");
+      }; /*showMenu = document에서 id가져와라 ->nav-menu -> 클래스 open을 toggle처리(on,off).*/
+
+      document.querySelector("#showBtn i").addEventListener("click", showMenu);
+      /*showBtn i를-> click이벤트 설정(누를 때) -> showMenu(함수)를!*/
+    </script>
+  </body>
+</html>

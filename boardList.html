@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home ->게시판> 공지사항 >목록보기</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0; /*바깥여백*/
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+      font-family: "Nanum Gothic", sans-serif;
+    }
+    table {
+      border-collapse: collapse; /*한 줄만 나옴*/
+      width: 100%;
+    }
+    select,
+    button,
+    input {
+      border: 0;
+      outline: 0; /*버튼테두리 없애기*/
+      background-color: transparent;
+    }
+
+    .tbl-wrap {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .page-top {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+    .page-top h2 {
+      font-size: 14px;
+    }
+
+    tr:first-child {
+      height: 50px;
+      text-align: center;
+      font-weight: bold;
+      background-color: #fa4251;
+      color: #fff;
+    }
+    tr:nth-child(2) {
+      height: 50px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      /* font-weight: bold; */
+      /* background-color: tomato; */
+      /* color: #fff; */
+    }
+    tr:nth-child(2):hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    td {
+      /* border: 1px solid #ccc; */
+    }
+
+    td:first-child {
+      width: 10%;
+    }
+    td:nth-child(2) {
+      width: 60%;
+    }
+    td:nth-child(3) {
+      width: 10%;
+    }
+    td:nth-child(4) {
+      width: 10%;
+    }
+    td:last-child {
+      width: 10%;
+    }
+    .page-wrap {
+      margin-top: 10px;
+    }
+    .start-num {
+      background-color: #3a8afe;
+      color: #fff;
+      /* 인라인을 블록타입처럼 사용할 때 */
+      /* 인라인은 넓이 높이 설정이 안된다 */
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px; /*높이를 알 때 세로정렬*/
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .start-num:hover {
+      background-color: #fff;
+      color: tomato;
+      border: 1px solid #3a8afe;
+      transition: 0.5s;
+    }
+    .page-button {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    input {
+      width: 120px;
+      height: 29px;
+      border: 1xp solid #ccc;
+    }
+    select {
+      width: 150px;
+      height: 29px;
+      border: 1xp solid #ccc;
+    }
+    button {
+      background-color: #3a8afe;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 3px;
+      vertical-align: bottom;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="tbl-wrap">
+      <div class="page-top">
+        <h2>부산it > 게시판 > 공지사항</h2>
+        <span class="total"> 전체게시물 <strong>10,000건</strong></span>
+      </div>
+      <table>
+        <tr>
+          <td>번호</td>
+          <td>제목</td>
+          <td>글쓴이</td>
+          <td>조회</td>
+          <td>날짜</td>
+        </tr>
+        <!-- for반복문 -->
+        <tr>
+          <td>1</td>
+          <td style="text-align: left">
+            <strong>안녕하세요^_^ 부산아이티아카데미입니다.</strong>
+          </td>
+          <td>관리자</td>
+          <td>10</td>
+          <td>2022-07-08</td>
+        </tr>
+        <!-- for -->
+      </table>
+      <div class="page-button">
+        <div class="page-wrap">
+          <!-- paging 처리,pagination -->
+          <span class="start-num">1</span>
+        </div>
+        <form
+          method="get"
+          action="boardSearch.do"
+          name="frm"
+          id="frm"
+          class="frm"
+        >
+          <div class="page-search">
+            <!-- <input type="radio" name="open" />공개게시물
+            <input type="radio" name="open" />비공개게시물
+            <input type="checkbox" name="fishing" />낚시
+            <input type="checkbox" name="climing" />클라이밍
+            <input type="checkbox" name="reading" />독서 -->
+
+            <select>
+              <option>제목</option>
+              <option>제목+내용</option>
+              <option>글쓴이</option>
+            </select>
+            <input type="text" required />
+            <button type="submit">검색</button>
+          </div>
+        </form>
+        <div class="page-btn">
+          <button type="button">글쓰기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

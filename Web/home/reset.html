@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+box-sizing : border-box 는 테두리까지 포함해서(컨텐츠와 패딩,마진) 너빗값을
+지정하는 것. 박스 중앙에 배치 1.width를 정한다. 2.margin :0 auto; * { margin: 0;
+padding: 0; box-sizing: border-box; } 컨테이너 박스를 정중앙으로 .container {
+width: 1300px; margin: 0 auto; } 박스 크기 정하고 max-width 100%주면 width따라
+크기 변한다. (박스 크기 헷갈리면 무조건 색깔 넣어보기) .box { text-align:
+center; width: 1280px; max-width: 100%; /*화면 줄이면 그 크기만큼 줄어듬*/
+margin: 0 auto; /*박스가 중앙에 위치*/ } 글자를 중앙으로 text-align: center;
+align-items: center; -> 플렉스 요소의 수직 방향 정렬 방식을 설정합니다. 박스
+안의 div가 펼쳐져 있을때 이 친구들을 수직 방향에서 중앙으로 배치한다. 두 줄
+이상을 가지는 플렉스 박스에서만 효과가 있습니다. -펼치고, 펼친걸 나란히 가로로 {
+display: flex; flex-direction: row; justify-content: space-between; } 펼친걸
+감싸면 내용물이 밖으로 넘치지 않고 내려가거나 한다~. flex-wrap: wrap; <박스 wrap
+감싸서 n줄 만들기> 박스하나*4 + 박스간격(margin 3개) = 전체 크기 (400px * 4) +
+(10px*3) = 1630px */ width: 1630px; margin: 0 auto; /* 크기 지정해야 가운데로
+정렬가능 */ @media (max-width: 숫자px){} -> 화면의 크기 변경할 때 사용 만약
+화면을 줄였을 때 박스들을 1열로 나열하고 싶다면 display:flex; flex-direction:
+column; (1열로) flex-wrap: nowrap; justify-content: space-between; -리스트 태그
+리셋- ul li { list-style: none; } -링크 태그 리셋 <a href=""></a>-
+text-decoration: none; ->링크 파란색 효과 없애준다. -버튼 태그 리셋 { border: 0;
+outline: 0; } -글자 넣는 이미지 추가할 때 .hero { background-image: url();
+background-image: no-repeat; background-position: center; background-size:
+cover; width: 100%; height: px; } -테이블 리셋- table { width: 100%;
+border-collapse: collapse; } height: vh; ->테이블의 전체 높이 조절(반응형)
+-버튼과 셀렉트(선택창)- button, select { border: 0; background-color: none; }
+button { cursor: pointer; } -리스트에서 링크 스타일 리셋- ul li a {
+text-decoration: none; color: black; }

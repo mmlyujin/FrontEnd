@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Box</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&family=Lato&family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      body {
+        background-color: #e7e7e7;
+        font-family: "Lato", sans-serif;
+      }
+      .login-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      .login-box {
+        box-shadow: 0 0 10px 3px pink;
+        background-color: #fff;
+        padding: 40px 50px;
+        border: 1px solid rgba(34, 36, 38, 0.2);
+        border-radius: 7px;
+        width: 500px; /*세로길이 안 주는게 보기좋음*/
+      }
+      .login-box h1 {
+        margin-bottom: 18px;
+      }
+      .userid,
+      .passwd {
+        margin-bottom: 10px;
+      }
+
+      input {
+        border: 0;
+        outline: 0;
+        border: 1px solid #d1d1d1;
+        border-radius: 3px;
+        width: 100%;
+        padding: 12px 8px;
+      }
+      .btn {
+        border: 0;
+        background-color: tomato;
+        color: #fff;
+        padding: 12px 16px;
+        font-size: 14px;
+        border-radius: 3px;
+        float: right;
+        cursor: pointer;
+      }
+      ::placeholder {
+        color: tomato;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-wrap">
+      <div class="login-box">
+        <h1>Login</h1>
+        <form
+          method="post"
+          action="../admin/index.html"
+          enctype="multipart/form-data"
+        >
+          <div class="userid">
+            <label>Userid</label>
+            <input
+              type="text"
+              name="userid"
+              clas="userid"
+              id="userid"
+              placeholder="Userid"
+            />
+          </div>
+          <div class="passwd">
+            <label>Password</label>
+            <input
+              type="password"
+              name="passwd"
+              clas="passwd"
+              id="passwd"
+              placeholder="Passwd"
+            />
+          </div>
+          <div>
+            <a href="sign.html"><strong>Don't you have an account?</strong></a>
+          </div>
+          <div><button type="submit" class="btn" id="btn">Login</button></div>
+          <p id="text" class="text"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    let UID = document.getElementById("userid");
+    let PSW = document.getElementById("passwd");
+    let IDBtn = document.getElementById("btn");
+    let DomText = document.getElementById("text");
+
+    const chkID = () => {
+      if (UID.value == "mml") {
+        alert("로그인 되었습니다^^!");
+      } else if (UID.value == "") {
+        DomText.innerHTML = "<b>아이디를 입력하세요.</b>";
+        UID.value = "";
+        UID.focus();
+      } else {
+        DomText.innerHTML = "<b>아이디를 확인하세요.</b>";
+        UID.value = "";
+        UID.focus();
+      }
+    };
+
+    IDBtn.addEventListener("click", chkID);
+  </script>
+</html>

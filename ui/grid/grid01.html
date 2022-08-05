@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+    body {
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.875rem; /*px를 나눈것*/
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /*1줄에 3개 들어간다.비율을 똑같이 넣어주세요.*/
+      /* grid-template-columns: 100px 200px 300px; 박스 각각 크기 다르게 준다. */
+      /* grid-template-columns: repeat(3, 1fr); 위와 같은 의미 */
+      /* column-gap: 10px; 열 사이에 간격을 만든다. */
+      gap: 20px; /*박스 하나씩 다 간격을 둔다.*/
+    }
+    .item {
+      background-color: steelblue;
+      color: #fff;
+      border: 1px solid skyblue;
+      padding: 20px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="item">box 1</div>
+      <div class="item">box 2</div>
+      <div class="item">box 3</div>
+      <div class="item">box 4</div>
+      <div class="item">box 5</div>
+      <div class="item">box 6</div>
+      <div class="item">box 7</div>
+      <div class="item">box 8</div>
+      <div class="item">box 9</div>
+    </div>
+  </body>
+</html>

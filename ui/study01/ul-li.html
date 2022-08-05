@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ul-li로 navbar 만들기</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0; /*바깥여백*/
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      ul li {
+        list-style: none; /*리스트 점 없애기*/
+      }
+      ul li a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        margin-right: 40px;
+      }
+      ul li a:hover {
+        color: red;
+        transition: 0.3s;
+      }
+      button {
+        border: 0;
+        outline: 0; /*버튼 테두리 없앤다*/
+      }
+      /*reset*/
+      .container {
+        width: 1280px;
+        margin: 0 auto; /*컨테이너 전체를 중앙으로*/
+      }
+
+      header,
+      .icons-wrap,
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      header {
+        padding: 30px;
+      }
+      header h1 {
+        font-size: 28px;
+        text-transform: capitalize;
+      }
+      .icon {
+        background-color: #ccc;
+        margin-right: 5px;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .icon:hover {
+        background-color: #ff7800;
+        color: #fff;
+        transition: 0.3s;
+      }
+      .icon i {
+        padding: 5px;
+      }
+      .icon i:hover {
+      }
+
+      .hero {
+        /*글자 넣는 이미지 추가할 때*/
+        background-image: url("./images/cook.jpg");
+        background-image: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+      }
+      .hero-content {
+        width: 800px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.7);
+        margin: 0 auto; /*중앙으로*/
+      }
+      .btn {
+        background-color: transparent; /*배경 투명 처리*/
+        border: 1px solid #000;
+        padding: 10px 20px;
+        border-radius: 3px;
+      }
+      .btn:hover {
+        background-color: rgba(255, 0, 0, 0.4);
+        transition: 0.5s;
+        color: #fff;
+        border: 1px solid transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>groco</h1>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Review</a></li>
+          <li><a href="#">Blogs</a></li>
+          <!--a태그안에 글자를 넣어야 링크적용-->
+        </ul>
+        <div class="icons-wrap">
+          <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="icon"><i class="fa-solid fa-user"></i></div>
+        </div>
+      </header>
+    </div>
+    <section class="hero">
+      <div class="hero-content">
+        <button class="btn">shop now</button>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Kristi&family=Lato&family=Lora:ital,wght@1,500&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      color: rgba(0,0,0,0.65);
+      text-decoration: none;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .white {
+      color: #999;
+    }
+
+    .lato-font {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .kristi-font {
+      font-family: 'Kristi', cursive;
+    }
+
+    .lora-font {
+      font-family: 'Lora', serif;
+    }
+
+    .ls-2 {
+      letter-spacing: 2px;
+    }
+
+    .top-wrap {
+      position:absolute;
+	  top:0;
+		left:5%;
+		right:5%;
+	  width:90%;
+	  height:60px;
+
+	display:flex;
+	justify-content:space-between;
+      align-items: center;
+    }
+
+    .top-wrap h1 {
+      font-size: 20px;
+      color: tomato;
+    }
+
+    .top-wrap h1 a {
+		font-size:24px;
+      color: red;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    ul li {
+      font-size: 12px;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    ul li a:hover {
+      color: tomato;
+      transition: 0.4s;
+    }
+
+    .hero-bg {
+      background-image: url();
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .hero-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+/*      background-color: rgba(0, 0, 0, 0.3);*/
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .hero-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: calc(100vh);
+    }
+
+    .hero-title {
+      text-align: center;
+      /* background-color: red; */
+    }
+
+    .hero-title h2 {
+      font-size: 100px;
+	  color: #333;
+    }
+
+    .hero-title span {
+      font-size: 11px;
+	  color: #555;
+    }
+
+    .show {
+      display: none;
+    }
+
+    .close {
+      display: none;
+    }
+
+    @media(max-width:1000px) {
+      .top-wrap h1 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      ul li {
+        margin-left: 25px;
+      }
+
+      .top-wrap {
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .hero-bg {
+        background-image: url();
+      }
+
+      .hero-title h2 {
+        font-size: 80px;
+      }
+    }
+
+    @media(max-width:500px) {
+      .top-wrap {
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+
+	  .hero-screen {
+	  background-color:red;
+	  }
+
+      .navbar-wrap {
+        display: none;
+				width:100%;
+
+
+      }
+
+
+
+      .navbar-wrap ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 1);
+		
+      }
+
+      .navbar-wrap ul li {
+        padding: 15px 0;
+      }
+
+      .navbar-wrap ul li a {
+        color: #000;
+      }
+
+	.hero-title h2 {
+		font-size: 60px;
+	}
+      .hero-bg {
+        background-image: url();
+      }
+
+      .show {
+        display: block;
+        cursor: pointer;
+      }
+
+      .show i {
+        font-size: 20px;
+        color: #999;
+      }
+
+      .open {
+        display: block;
+      }
+
+      .close {
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+      }
+
+      .close i {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero-bg">
+    <div class="hero-screen">
+	<div class="top-wrap">
+        <h1><a href="./">TASTY</a></h1>
+        <div class="navbar-wrap">
+          <ul class="lato-font">
+            <li><a href="">HOME</a></li>
+            <li><a href="">RESTO</a></li>
+            <li><a href="">MENU</a></li>
+            <li><a href="">SPECIAL</a></li>
+            <li><a href="">RESERVATION</a></li>
+            <li><a href="">GALLERY</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li>
+              <a href="login.html">LOGIN</a>
+			 </li>
+            <span class="close" id="close"><i class="fa-solid fa-xmark"></i></span>
+          </ul>
+        </div>
+        <div class="show" id="show"><i class="fa-solid fa-bars"></i></div>
+      </div>
+      <div class="hero-wrap">
+        <div class="hero-title">
+          <h2 class="kristi-font">delicious italian food</h2>
+          <span class="lora-font ls-2"><strong>MAKING DELICIOUS ITALIAN FOOD SINCE 1990</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const show_btn = document.querySelector('#show i');
+    const close_btn = document.querySelector('#close i');
+
+    const navbar = document.querySelector('.navbar-wrap');
+    const showMenu = () => {
+      navbar.classList.add('open');
+    };
+    const closeMenu = () => {
+      navbar.classList.remove('open');
+    };
+
+    show_btn.addEventListener('click', showMenu);
+    close_btn.addEventListener('click', closeMenu);
+  </script>
+</body>
+
+</html>

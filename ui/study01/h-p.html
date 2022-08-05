@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>h1~h6(제목),p(문단) 예제</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0; /*바깥여백*/
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+      } /*전체글씨 설정*/
+      .box-wrap {
+        background-color: #eee;
+        padding: 50px 0;
+        /* padding: (위아래) (오왼); */
+      }
+      .box {
+        text-align: center;
+        width: 1280px;
+        max-width: 100%; /*화면 줄이면 그 크기만큼 줄어듬*/
+        margin: 0 auto; /*박스가 중앙에 위치*/
+      }
+      .box > .subtitle {
+        font-size: 24px; /*기본 폰트 사이즈는 16px*/
+      }
+      .box > h3 {
+        font-size: 45px;
+        margin: 10px 0;
+      }
+      .box > .content {
+        /* color: #aaa; */
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      .icon-box-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .icon-box {
+        /* background-color: red; */
+        width: 32%;
+      }
+      i {
+        font-size: 60px;
+      }
+      .icon-box-wrap h4 {
+        font-size: 22px;
+        margin: 10px 0;
+      }
+      .icon-box-wrap p {
+        color: gray;
+      }
+      /* pc version type 끝*/
+
+      /*mobile type시작  */
+      @media (max-width: 400px) {
+        body {
+          font-family: "Poppins", sans-serif;
+        } /*전체글씨 설정*/
+        .box-wrap {
+          background-color: #eee;
+          padding: 50px 0;
+          /* padding: (위아래) (오왼); */
+        }
+
+        .box > .subtitle {
+          font-size: 16px; /*기본 폰트 사이즈는 16px*/
+        }
+        .box > h3 {
+          font-size: 25px;
+          margin: 10px 0;
+        }
+        .box > .content {
+          /* color: #aaa; */
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+      /*mobile type 끝 */ ;
+    </style>
+  </head>
+  <body>
+    <!--h1~h6(중요도 순서),heading,p는 많은 내용,로고는 h1주기-->
+    <div class="box-wrap">
+      <div class="box">
+        <p class="subtitle">WHAT WE DO</p>
+        <h3>We have the knowledge and experience.</h3>
+        <p class="content">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+          optio saepe aliquam expedita quidem, est iusto, fugit sed ratione
+          officia, doloremque culpa facilis animi aspernatur deserunt magni rem
+          corporis. Blanditiis?
+        </p>
+        <!--icon box-->
+        <div class="icon-box-wrap">
+          <div class="icon-box">
+            <div class="icons">
+              <span class="icon-wrap"
+                ><i class="fa-solid fa-chart-pie"></i
+              ></span>
+            </div>
+            <h4>Visualize it</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+              recusandae impedit! Error, repellendus.
+            </p>
+          </div>
+          <div class="icon-box">
+            <div class="icons">
+              <span class="icon-wrap"
+                ><i class="fa-solid fa-chart-pie"></i
+              ></span>
+            </div>
+            <h4>Visualize it</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+              recusandae impedit! Error, repellendus.
+            </p>
+          </div>
+          <div class="icon-box">
+            <div class="icons">
+              <span class="icon-wrap"
+                ><i class="fa-solid fa-chart-pie"></i
+              ></span>
+            </div>
+            <h4>Visualize it</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+              recusandae impedit! Error, repellendus.
+            </p>
+          </div>
+        </div>
+        <!--icon box end-->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*1번째
+      const fruits = ["orange", "apple", "peach"];
+      for (let i = 0; i < fruits.length; ++i) {
+        console.log(`${i}번째 : ${fruits[i]}`);
+      }*/
+
+      /*for ~ in */
+      /*2번째
+      const fruits = ["orange", "apple", "peach"];
+      for (let i in fruits) {
+        console.log(`${i}번째 : ${fruits[i]}`);
+      }*/
+
+      /*3번째   forEach: 배열명.forEach() 
+      const fruits = ["orange", "apple", "peach"];
+      fruits.forEach((value, index) => {
+        console.log(`${index}번째 : ${value}`);
+      });*/
+
+      //for(반복) -> 한번 가공 -> map(반복)
+      //배열명.map();
+      const fruits = [100, 200, 300];
+      const sum = fruits.map((value, index) => {
+        return value * value;
+      });
+      console.log(sum);
+      fruits.forEach(console.log);
+    </script>
+  </body>
+</html>

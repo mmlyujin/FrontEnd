@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--박스가운데배치-->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가로세로정렬 : flex-position</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      input,
+      button {
+        border: 0;
+        outline: 0;
+        background-color: transparent; /*버튼 투명*/
+      }
+
+      body {
+        /* 넓이, 높이가 무조건 100%로 설정되어 있음! */
+        background-color: #01c4ff;
+        font-family: "Lato", sans-serif;
+      }
+      .login-box-wrap {
+        display: flex;
+        /* 가로 */
+        justify-content: center; /*박스를 중앙으로*/
+        /* 세로 */
+        align-items: center;
+        /* background-color: red; */
+        /* 디바이스 높이에 맞게 무조건 세로로 채우기 */
+        height: 100vh; /*vh는 viewport 너가 보는 화면에 맞춘다.*/
+      }
+      .login-box {
+        background-color: #fff;
+        /* display: inline-block; 인라인으로 변경 */
+        width: 400px;
+        height: 250px;
+        border-radius: 15px;
+        padding: 40px;
+      }
+      .login-box h3 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+      .box-text {
+        color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box-wrap">
+      <form
+        method="=post"
+        action="login_process.do"
+        enctype="multipart/form-data"
+        name="frm"
+        id="frm"
+        class="frm"
+      >
+        <div class="login-box">
+          <h3>LOGIN <span class="box-text">BOX</span></h3>
+          <div class="userid-wrap">
+            <i class="fa-solid fa-id-badge"></i>
+            <label for="userid">User ID</label>
+            <input
+              type="text"
+              required
+              name="userid"
+              class="userid"
+              id="userid"
+              maxlength="12"
+              placeholder="insert ID..."
+            />
+          </div>
+          <div class="password-wrap">
+            <i class="fa-solid fa-key"></i>
+            <span>PassWD</span>
+            <input
+              type="password"
+              required
+              name="passwd"
+              class="passwd"
+              id="passwd"
+              maxlength="8"
+              placeholder="insert PassWD..."
+            />
+          </div>
+          <div class="btn-wrap">
+            <button type="submit">Sign In</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COCO Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      ul li {
+        list-style: none;
+      }
+      body {
+        background-color: #fff;
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      .outer-container{
+        max-width: 100%;
+        margin: 0 auto;
+        height: 100%;
+      }
+
+       /* 헤더 부분 시작 */
+       .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .logo {
+        margin-left: 30px;
+      }
+      h1 a{
+        font-family: "Pacifico", cursive;
+        color: rosybrown;
+        font-size: 40px;
+      }
+      .right_menu {
+        margin-right: -680px;
+      }
+      .right_menu ul {
+        display: flex;
+        margin-right: 30px;
+      }
+      .right_menu ul li {
+        margin-right: 10px;
+      }
+      .right_menu ul li a {
+        font-size: 14px;
+      }
+      .right_menu ul li a:hover {
+        color: rosybrown;
+        transition: 0.3s;
+      }
+      .showBtn i {
+        display: none;
+      }
+   
+      /* 헤더 부분 끝 */
+
+      .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image:url(./images/backgroundpuppy03.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+      .ui-container-box {
+        background-color: #fff;
+        width: 350px;
+        height: 400px;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+      }
+      .ui-container{
+        background-color: #fff;
+        margin-top: 50px;
+
+      }
+      .login-logo{
+       font-size: 30px;
+      }
+      .id-box {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      input {
+        outline: 0;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        height: 30px;
+        width: 250px;
+      }
+      button {
+        margin-top: 40px;
+        border-radius: 10px;
+        height: 45px;
+        width: 250px;
+        border: 1px solid rosybrown;
+        background-color: #fff;
+        color: rosybrown;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .pw-missing{
+        margin-top:30px;
+      }
+      .making-id{
+        margin-top: 20px;
+      }
+      @media (max-width:650px){
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 30px;
+          height: 180px;
+        }
+        .logo {
+          margin-left: 30px;
+        }
+        h1 a {
+          font-family: "Pacifico", cursive;
+          color: rosybrown;
+          font-size: 35px;
+        }
+        .right_menu {
+          display: none;
+        }
+        .right_menu ul {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+          margin: 20px;
+          width: 200px;
+        }
+        .right_menu ul li {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        .right_menu ul li a {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        ul li a:hover {
+          color: rosybrown;
+          transition: 0.3s;
+        }
+
+        .showBtn i {
+          font-size: 25px;
+          cursor: pointer;
+          color: #000;
+          margin-right: 20px;
+        }
+        .showBtn i {
+          display: block;
+        }
+        .open {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="header">
+        <div class="logo">
+          <h1><a href="./mainpage.html"><i class="fa-solid fa-paw"></i>&nbspCOCO</a></h1>
+        </div>
+        <div class="right_menu" id="right_menu">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="./loginpage.html">로그인</a></li>
+            <li><a href="./signinpage.html">회원가입</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">주문조회</a></li>
+            <li>
+              <a href="#">장바구니<i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="showBtn" id="showBtn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="main">
+       <div class="ui-container-box">
+        <div class="ui-container">
+        <h2 class="login-logo" style="color:saddlebrown">로그인</h2>
+         <form action="" method="post">
+           <div class="id-box">
+            <input type="text" class="" placeholder="아이디" required/>
+          </div>
+          <div class="password-box">
+            <input type="password" class="" placeholder="비밀번호" required/>
+          </div>
+          <div class="login-box">
+            <button type="submit">로그인</button>
+          </div>
+          <div class="pw-missing">
+            <a href="#">비밀번호를 잊어버리셨나요?</a>
+          </div>
+          <div class="making-id">
+            계정이 없으신가요?<a href="./signinpage.html" style="color:dodgerblue;"> 회원가입</a>
+          </div>
+        </form>
+      </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <script>
+      const showMenu = () => {
+        document.getElementById("right_menu").classList.toggle("open");
+      }; /*showMenu = document에서 id가져와라 ->nav-menu -> 클래스 open을 toggle처리(on,off).*/
+
+      
+      document.querySelector("#showBtn i").addEventListener("click", showMenu);
+      /*showBtn i를-> click이벤트 설정(누를 때) -> showMenu(함수)를!*/
+    </script>
+  </body>
+</html>

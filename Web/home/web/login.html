@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="semantic/semantic.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #e7e7e7;
+      }
+
+      .outer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .box {
+        border: 1px solid rgba(34, 36, 38, 0.2);
+        padding: 40px 50px;
+        border-radius: 7px;
+        background-color: white;
+        box-shadow: 0 0 10px 3px pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outer-container">
+      <div class="ui container box" style="width: 500px">
+        <h1 style="margin-bottom: 20px">Login</h1>
+        <form class="ui form" action="index.html">
+          <div class="field">
+            <label>Userid</label>
+            <input type="text" name="userid" placeholder="Userid" required />
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input
+              type="password"
+              name="passwd"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="field">
+            <!-- <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden">
+                        <label>I agree to the Terms and Conditions</label>
+                    </div> -->
+            <a href="./sign.html"
+              ><strong>Don't you have an account?</strong></a
+            >
+          </div>
+          <button class="ui button red right floated" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data()</title>
+  </head>
+
+  <body>
+    <div id="show"></div>
+    <script>
+      function clock() {
+        setInterval(() => {
+          let today = new Data();
+
+          let hours = today.getHours();
+          let minutes = today.getMinutes();
+          let seconds = today.getSeconds();
+
+          document.getElementById(
+            "show"
+          ).innerHTML = `${hours}시${minutes}분${seconds}초`;
+        }, 1000); //1초가 1000 이다.
+      }
+
+      //clock();
+      /* let today = new Date();
+         let hour = today.getHours();
+     
+         if (hour < 12) {
+           alert("오전입니다.");
+         } else {
+           alert("오후입니다.");
+         }*/
+    </script>
+  </body>
+</html>

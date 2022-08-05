@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .div-align-center {
+        /* 박스하나*4 + 박스간격(margin 3개) = 전체 크기 */
+        /* 400px *4 +10px*3 = 1630px */
+        width: 1630px;
+        margin: 0 auto; /* 크기 지정해야 가운데로 정렬가능 */
+      }
+      .box-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .box {
+        background-color: limegreen;
+        width: 400px;
+
+        margin-bottom: 10px;
+      }
+      .box-img img {
+        width: 100%;
+      }
+      @media (max-width: 400px) {
+        .div-align-center {
+          /* 박스하나*4 + 박스간격(margin 3개) = 전체 크기 */
+          /* 400px *4 +10px*3 = 1630px */
+          width: 1630px;
+          margin: 0 auto; /* 크기 지정해야 가운데로 정렬가능 */
+        }
+        .box-wrap {
+          display: flex;
+          /******************************/
+          /*flex-direction ->column*/
+          /* flex-wrap ->nowrap */
+          /******************************/
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+        }
+        .box {
+          background-color: limegreen;
+          width: 400px;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 화면 넓이 지정&div(사각형)을 가운데로 이동 -->
+    <div class="div-align-center">
+      <!--   display: flex;
+             flex-direction: row;
+             flex-wrap: wrap;
+        가로 배치를 위한 플랙스 설정 div -->
+      <div class="box-wrap">
+        <!-- 박스 넓이 설정 -->
+        <div class="box">
+          <div class="box-image">
+            <a href="./images/bag1.jpg"></a>
+          </div>
+          <div class="box-detail">
+            <div class="item-title">상품제목</div>
+            <div class="item-price">가격</div>
+            <div class="right-icon"></div>
+            제목가격
+          </div>
+        </div>
+        <div class="box"></div>
+        <div class="box">이미지</div>
+        <div class="box">이미지</div>
+        <div class="box">이미지</div>
+        <div class="box">이미지</div>
+        <div class="box">이미지</div>
+        <div class="box">이미지</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      section {
+        margin: 0 auto;
+      }
+      header h1 {
+        margin-top: 50px;
+        text-align: center;
+      }
+      .div-align-center {
+        width: 1220;
+        margin: 0 auto;
+      }
+      .box-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      .box {
+        /* background-color: antiquewhite; */
+        width: 400px;
+        margin-bottom: 10px;
+      }
+
+      .box-img {
+        overflow: hidden;
+      }
+      .box-img img {
+        width: 100%;
+      }
+
+      .box-img img:hover {
+        /*img에 hover적용해야 hidden 적용!*/
+        transform: scale(1.1);
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      .box-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-size: 18px;
+        color: #fff;
+        background-color: tomato;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 3px;
+      }
+      .logo:hover {
+        cursor: pointer;
+        background-color: gray;
+        color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Shop Products</h1>
+      </header>
+      <div class="div-align-center">
+        <div class="box-wrap">
+          <div class="box">
+            <div class="box-img"><img src="./images/bag1.jpg" alt="" /></div>
+            <div class="box-text">
+              <div class="info">
+                <h3>Adidas Black Bag</h3>
+                <p>$50</p>
+              </div>
+              <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-img">
+              <img src="./images/idhoodie.jpg" alt="" />
+            </div>
+            <div class="box-text">
+              <div class="info">
+                <h3>Hoodie</h3>
+                <p>$40</p>
+              </div>
+              <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-img">
+              <img src="./images/socks1.jpg" alt="" />
+            </div>
+            <div class="box-text">
+              <div class="info">
+                <h3>Socks</h3>
+                <span class="old price">$15</span>
+                <span class="new price">$10</span>
+              </div>
+              <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-img"><img src="./images/bag1.jpg" alt="" /></div>
+            <div class="box-text">
+              <div class="info">
+                <h3>Adidas Black Bag</h3>
+                <p>$50</p>
+              </div>
+              <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-img">
+              <img src="./images/idhoodie.jpg" alt="" />
+            </div>
+            <div class="box-text">
+              <div class="info">
+                <h3>Hoodie</h3>
+                <p>$40</p>
+              </div>
+              <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-img">
+              <img src="./images/socks1.jpg" alt="" />
+            </div>
+            <div class="box-text">
+              <div class="info">
+                <h3>Socks</h3>
+                <span class="old price">$15</span>
+                <span class="new price">$10</span>
+              </div>
+              <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

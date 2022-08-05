@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .div-align-center {
+        /*400*3 + 10px = 1220px*/
+        width: 1220px;
+        margin: 0 auto;
+      }
+      .box-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .box {
+        /* background-color: antiquewhite; */
+        width: 400px;
+        margin-bottom: 10px;
+      }
+      .box img {
+        width: 100%;
+      }
+      .old price {
+        color: tomato;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .new price {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .right-icon {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-align-center">
+      <div class="box-wrap">
+        <div class="box">
+          <img src="./images/bag1.jpg" alt="" />
+          <div class="item-title">상품제목</div>
+          <div class="item-price">
+            <div class="left-price">
+              <span class="old price">$98.99</span>
+              <span class="new price">$98.99</span>
+            </div>
+            <div class="right-icon">.</div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./images/idhoodie.jpg" alt="" />
+        </div>
+        <div class="box">
+          <img src="./images/idsocks.jpg" alt="" />
+        </div>
+        <div class="box">
+          <img src="./images/home1.jpg" alt="" />
+        </div>
+        <div class="box">
+          <img src="./images/home2.jpg" alt="" />
+        </div>
+        <div class="box">
+          <img src="./images/home3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
