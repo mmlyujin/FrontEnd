@@ -1,0 +1,26 @@
+<git>
+ 
+---pull(깃에 있는 것을 가져올 때)----
+1.파일 생성
+2.cmd 파일 이동할때는 cd 파일명
+vscode에서는 ctrl + ` 누르면 터미널로 이동
+파일로 이동해서 git init (그러면 숨긴파일로 .git 생성)
+3.git remote add origin (깃 파일링크)
+4.git pull <remote> <branch> 해야함
+ex) git pull origin main
+
+-----push(깃에 넣을때)-----
+1.git add . ->git init이 된 폴더에 있는 모든 폴더를 다 add
+2.git commit -m "추가할때 넣을 메세지 넣는다."
+ex) git commit -m"로그인 화면까지 완성함."
+3.git push
+
+
+git log
+
+git reset
+
+git revert
+
+
+
