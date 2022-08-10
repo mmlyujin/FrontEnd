@@ -1,4 +1,12 @@
 -----------my sql-----------
+//*중요* => database(폴더) > table(파일)
+(영어는	생성 create -> 변경 alter -> 제거 delete
+대문자)	자료검색 select * from 테이블명
+	자료입력 insert into 테이블명 values();
+	자료삭제 delete from 테이블명 where~
+	자료수정 update 테이블명 set 바꿀컬럼 = 바꿀값 where ~ //
+
+
 내pc -> 속성-> 고급시스템설정 ->환경변수 -> 시스템 변수 path 에서 경로 등록
 1.접속 
 cmd창 -> mysql -uroot -p 그다음 내 패스워드 입력 나올때는 exit
@@ -202,6 +210,63 @@ SELECT height, name FROM usertbl ORDER BY height DESC ;
 
 보여질 개수 limit (개수) limit(시작번호,개수)
 SELECT height, name FROM usertbl ORDER BY height DESC limit 5;
+
+-----------------------------------------------------------------------------------------
+비밀번호 변경
+ALTER user busanit@'%' identified by '1111';
+flush privileges;
+
+계정 삭제
+DROP user busanit;
+
+------------------------------------------------------------------------------------------
+기본키 : primary key 
+- 중복되면 x
+- not null
+
+not null primary key auto_increment
+
+CREATE TABLE users(
+num int not null primary key auto_increment,
+username varchar(10) not null, 
+userid varchar(12) not null,
+passwd varchar(10) not null,
+email varchar(50) not null,
+born char(10),
+phone char(13) not null,
+gender char(1),
+userDate date
+);
+
+INSERT INTO users VALUES(NULL,'busanit','bs','12345','coco@email.com','2022-08-10','010-1234-5678','F',now());
+
+SELECT num FROM users ORDER BY num DESC;
+
+//유사어 검색
+SELECT * FROM users WHERE userid like '%s%';      =>유저아이디에서 s찾는것
+SELECT * FROM users WHERE userid = 's';
+
+------------------------------------------------------------------------------------
+INSERT INTO ~ 
+SELECT ~FROM 
+DELETE FROM ~
+
+//데이터 정보 바꿀 때
+UPDATE 테이블이름 SET 컬럼1 = 바꿀값, 컬럼2 = 바꿀값 WHERE id = ?
+UPDATE users SET passwd='2222',email='ruby@naver.com',userDate = now() WHERE num = 3;
+SELECT * FROM users WHERE num = 3;    ->바뀐것 확인
+DELETE FROM users WHERE num = 3;   -> 지정해서 삭제
+DELETE FROM users  -> 전체 삭제
+
+add/insert
+select/view? 
+select/view
+
+edit/modify/update?id=1 ->id 값이 필요
+edit/modify/update/1 ->id 값이 필요
+
+remove / delete?id=2 ->id 값이 필요
+remove / delete/2 ->id 값이 필요
 
 
 

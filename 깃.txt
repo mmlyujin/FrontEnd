@@ -23,4 +23,45 @@ git reset
 git revert
 
 
+git remote add origin https://github.com/mmlyujin/JAVA.git
+git branch -M main
+git push -u origin main
+
+
+===========에러 해결방법==============
+
+-> push 했을때 밑과 같은 에러 
+Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing
+ to the same ref. You may want to first integrate the remote changes
+ (e.g., 'git pull ...') before pushing again.
+See the 'Note about fast-forwards' in 'git push --help' for details.
+
+해결방법 -> 
+//연결된 원격저장소 있는지 확인
+git remote -v
+
+//이미 존재하는 원격저장소 삭제
+git remote rm origin
+
+//원격저장소와 연결(내가 push할 레퍼지토리 주소)
+git remote add origin [깃헙 레퍼지토리 주소]
+
+//브랜치 이름확인
+git branch
+
+//branch명 바꾸는 방법
+git branch -M [되고 싶은 branch name]
+git branch -m [현재 branch name] [바꾸고싶은 branch name]
+-> git branch -m master main
+    git branch -m main
+
+//branch를 전환
+git branch checkout [전환하고 싶은 브랜치명]
+
+//깃헙의 파일 먼저 가져오기
+git pull origin main (branch 이름이 main일 때)
+git pull
+
+//그리고 드디어 push!! 
+git push -u origin main 
 
