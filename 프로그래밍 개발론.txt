@@ -1,0 +1,30 @@
+*프로그래밍 개발론*
+
+1.분석,설계
+파일이름 규칙
+-html
+ name = id class
+ 이름규칙정하기 (-)붙이거나 붙여서쓰거나
+ 주석은 <!-- --> ,/* */로 사용
+
+-javascript
+ 함수이름규칙
+ if,for,forEach
+
+ 변수규칙
+ onclick, onsubmit,addeventlistener
+
+2.coding
+
+3.test
+
+arr[4] ->arr
+
+객체나 배열은 변수 선언하면 메모리 시작 주소가 할당
+
+mysql - CRUD, rest api
+insert(입력),
+select(출력),
+update(수정), 
+delete(삭제)
+mongodb : json
