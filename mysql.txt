@@ -1,0 +1,209 @@
+-----------my sql-----------
+내pc -> 속성-> 고급시스템설정 ->환경변수 -> 시스템 변수 path 에서 경로 등록
+1.접속 
+cmd창 -> mysql -uroot -p 그다음 내 패스워드 입력 나올때는 exit
+root 비번 root
+2.
+데이터베이스(폴더) -> 테이블 (파일)
+
+데이터베이스 보기
+show databases;
+
+데이터베이스를 선택하는 명령어는
+->use 데이터베이스 이름(use mysql)
+
+데이터베이스 안에 있는 테이블 확인
+-> show tables;
+
+테이블(파일)내용확인
+-> SELECT user FROM user;
+
+서버는 절대 관리자 계정으로 작업하면 x
+-> 사용자 계정을 만들어서 사용.
+ex) 프로젝트 쇼핑몰 
+    shop/1234 계정을 생성한 후 작업
+
+계정 생성
+CREATE user shop@'localhost' identified by '1234'; ->권한 설정
+
+사용자 제거
+DROP user shop@'localhost'; ->ok확인하기
+
+권한설정
+grant all privileges on shop.* to shop@'localhost' with grant option;
+flush privileges;
+
+show databases;
+
+CREATE database shopping;
+show databases;
+
+use shopping;
+
+
+삭제됐는지 다시 확인은
+SELECT user FROM user; -> user안에 shop이 없어졌는지 확인.
+
+->ok뜬다.
+    
+***기억해야함*************************
+DDL : 
+ -CREATE(생성) 
+ -ALTER(수정) 
+ -DROP(제거)
+DML : 
+- SELECT (자료를 보여주는 명령어)
+- INSERT (자료를 입력하는 명령어)
+- UPDATE (자료의 내용을 바꾸는 명령어)
+- DELETE (자료를 삭제)
+******************************************
+변수명 데이터타입
+CREATE TABLE Register(
+userid varchar(15),
+passwd varchar(10),
+email varchar(50),
+username varchar(10),
+regdate date,
+point int default 1000
+);
+
+-------------------------------------------------------------
+0.관리자 계정으로 접속
+1.계정생성(busanit/....)
+CREATE user busanit@'%' identified by '1234';
+
+2. 권한설정
+-grant all privileges on busanit.* to busanit@'%' with grant option;
+-flush privileges;
+
+3. exit 한 후
+생성한 계정으로 접속
+ =>  mysql -u busanit -p
+(-u뒤에 생성한 user 이름)
+
+4. show databases; ->사용할 데이터베이스가 있는지
+
+5. CREATE DATABASE busanit;
+ -폴더안에 회원가입,게시판,상품관리,상품카트...
+
+6. show databases;
+
+7.use busanit;
+
+8.회원가입 테이블(파일) 만들기
+	varchar - variable char
+
+-테이블 : register
+  -사용자 아이디 : 변수명(uid) 타입(글자) 길이(20) 값이 없어도 되나요?
+  -비밀번호 : 변수명(pwd) 타입(글자) 길이(15) 값이 없어도 되나요?
+  -이메일 : 변수명(email) 타입(글자) 길이(50) 값이없어도 되나요?
+  -이름 : 변수명(uname) 타입(글자) 길이(20) 값이 없어도 되나요?
+  -성별 : 변수명(gender) 타입(글자) 고정길이(1) 값이 없어도 되나요?
+  -가입일 : 변수명(regdate) 타입(날짜)
+
+CREATE TABLE register(
+uid VARCHAR(20) NOT NULL,
+pwd VARCHAR(15) NOT NULL,
+email VARCHAR(50) NOT NULL,
+uname VARCHAR(20) NOT NULL,
+gender  CHAR(1) NOT NULL,
+regdate date
+);
+
+CREATE TABLE usertbl -- 회원 테이블
+( userID CHAR(8) NOT NULL PRIMARY KEY, -- 사용자 아이디(PK)
+  name VARCHAR(10) NOT NULL, -- 이름
+  birthYear INT NOT NULL,  -- 출생년도
+  addr CHAR(2) NOT NULL, -- 지역(경기,서울,경남 식으로 2글자만입력)
+  mobile1 CHAR(3), -- 휴대폰의 국번(011, 016, 017, 018, 019, 010 등)
+  mobile2 CHAR(8), -- 휴대폰의 나머지 전화번호(하이픈제외)
+  height SMALLINT,  -- 키
+  mDate DATE  -- 회원 가입일)
+);
+
+INSERT INTO usertbl VALUES('LSG', '이승기', 1987, '서울', '011', '1111111', 182, '2008-8-8');
+INSERT INTO usertbl VALUES('KBS', '김범수', 1979, '경남', '011', '2222222', 173, '2012-4-4');
+INSERT INTO usertbl VALUES('KKH', '김경호', 1971, '전남', '019', '3333333', 177, '2007-7-7');
+INSERT INTO usertbl VALUES('JYP', '조용필', 1950, '경기', '011', '4444444', 166, '2009-4-4');
+INSERT INTO usertbl VALUES('SSK', '성시경', 1979, '서울', NULL  , NULL      , 186, '2013-12-12');
+INSERT INTO usertbl VALUES('LJB', '임재범', 1963, '서울', '016', '6666666', 182, '2009-9-9');
+INSERT INTO usertbl VALUES('YJS', '윤종신', 1969, '경남', NULL  , NULL      , 170, '2005-5-5');
+INSERT INTO usertbl VALUES('EJW', '은지원', 1972, '경북', '011', '8888888', 174, '2014-3-3');
+INSERT INTO usertbl VALUES('JKW', '조관우', 1965, '경기', '018', '9999999', 172, '2010-10-10');
+INSERT INTO usertbl VALUES('BBK', '바비킴', 1973, '서울', '010', '0000000', 176, '2013-5-5');
+INSERT INTO buytbl VALUES(NULL, 'KBS', '운동화', NULL   , 30,   2);
+INSERT INTO buytbl VALUES(NULL, 'KBS', '노트북', '전자', 1000, 1);
+INSERT INTO buytbl VALUES(NULL, 'JYP', '모니터', '전자', 200,  1);
+INSERT INTO buytbl VALUES(NULL, 'BBK', '모니터', '전자', 200,  5);
+INSERT INTO buytbl VALUES(NULL, 'KBS', '청바지', '의류', 50,   3);
+INSERT INTO buytbl VALUES(NULL, 'BBK', '메모리', '전자', 80,  10);
+INSERT INTO buytbl VALUES(NULL, 'SSK', '책'    , '서적', 15,   5);
+INSERT INTO buytbl VALUES(NULL, 'EJW', '책'    , '서적', 15,   2);
+INSERT INTO buytbl VALUES(NULL, 'EJW', '청바지', '의류', 50,   1);
+INSERT INTO buytbl VALUES(NULL, 'BBK', '운동화', NULL   , 30,   2);
+INSERT INTO buytbl VALUES(NULL, 'EJW', '책'    , '서적', 15,   1);
+INSERT INTO buytbl VALUES(NULL, 'BBK', '운동화', NULL   , 30,   2);
+
+CREATE TABLE buytbl -- 회원 구매 테이블(Buy Table의 약자)
+(  num INT AUTO_INCREMENT NOT NULL PRIMARY KEY, -- 순번(PK)
+   userID CHAR(8) NOT NULL, -- 아이디(FK)
+   prodName CHAR(6) NOT NULL, --  물품명
+   groupName CHAR(4)  , -- 분류
+   price INT  NOT NULL, -- 단가
+   amount SMALLINT  NOT NULL, -- 수량
+   FOREIGN KEY (userID) REFERENCES usertbl(userID)
+);
+
+9. desc register; - >테이블 구조 확인
+
+//10.테이블 삭제할 때는 => drop table register;
+
+11.데이터 입력(변수)
+ 
+ INSERT INTO register VALUES('busanit','12345','email@email.com','busan','F',NOW()); 
+
+/상세보기
+SELECT * FROM register; =>내가 입력한 모든 데이터 값 확인가능.(
+/목록
+SELECT uid, email, uname, regdate FROM register;
+
+전체개수(as 뒤는 개수의 이름)
+SELECT COUNT(*) as 전체회원수 FROM register; => 데이터 입력한 개수가 나온다.
+
+-------------------------------------------------------------------
+mysql database backup :덤프
+ 
+mysqldump -uroot -p busanit > 20220810-busanit.sql
+비번 입력후 dir 치고 들어갔는지 확인
+mysqldump -uroot -p busanit > 20220810-busanit.dump
+
+SELECT * FROM 테이블이름 WHERE ~ 
+INSERT INTO 테이블이름 VALUES();
+
+DELETE FROM 테이블이름 WHERE 조건;
+
+ INSERT INTO register VALUES('seoulit','12345','email@email.com','busan','F',NOW()); =>데이터 입력
+
+SELECT * FROM register => 확인
+
+uid,pwd,uname,email,gender -> 각각 column
+
+DELETE FROM register WHERE uid = 'busanit'; =>uid busanit 지정해서 지우기!
+
+SELECT * FROM register =>삭제됐는지 체크!
+
+SELECT COUNT(*) FROM register; => 데이터 개수 추출
+
+오름차순 정렬 : 1234,가나다
+SELECT height, name FROM usertbl ORDER BY height ASC;
+
+내림차순
+SELECT height, name FROM usertbl ORDER BY height DESC ;
+
+보여질 개수 limit (개수) limit(시작번호,개수)
+SELECT height, name FROM usertbl ORDER BY height DESC limit 5;
+
+
+
+
+
