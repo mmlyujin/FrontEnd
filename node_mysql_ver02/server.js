@@ -10,6 +10,7 @@ const dbconnect = mysql.createConnection({
   user: "busanit",
   password: "1234",
   database: "busanit",
+  dateStrings: "date",
 });
 
 dbconnect.connect((err) => {
@@ -49,6 +50,37 @@ app.get("/register", (req, res) => {
   //console.log("콘솔에서 보이는 글자");
   //res.send("브라우저에서 글자가 보임");
   res.render("register", { title: "Register" }); //res.render안에 파일 이름 적어주면 됨. -확장자x
+});
+
+app.post("/register", (req, res) => {
+  const sql = "INSERT INTO tb_users01 VALUES(?,?,?,?,?)";
+  dbconnect.query(
+    sql[
+      (req.body.userid,
+      req.body.email,
+      req.body.gender,
+      req.body.checkbox,
+      req.body.region)
+    ],
+    (err) => {
+      if (!err) {
+        console.log("회원가입 완료");
+        res.redirect("/memberList");
+      } else {
+        console.log(err);
+        console.log("관리자에 문의하세요.");
+        res.redirect("/register");
+      }
+    }
+  );
+});
+
+app.get("/memberList", (req, res) => {
+  const sql = "SELECT * FROM tb_users01";
+  dbconnect.query(sql, (err, results) => {
+    console.log(results);
+    res.render("memberList", { title: "Home > List", users: results });
+  });
 });
 
 let PORT = 4000;

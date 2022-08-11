@@ -28,41 +28,23 @@
           <td>취미</td>
           <td>지역</td>
         </tr>
+        <%= users %> <% if(users ==''){ %>
         <tr>
-          <td><input type="checkbox" name="" id="" class="chk" />회원1</td>
-          <td>email01@naver.com</td>
-          <td>여자</td>
-          <td>운동하기</td>
-          <td>서울특별시</td>
+          <td colspan="6">등록된 사용자가 없습니다.</td>
         </tr>
+        <% } else{ users.forEach((user)=>{ %>
+
         <tr>
-          <td><input type="checkbox" name="" id="" class="chk" />회원2</td>
-          <td>email02@gmail.com</td>
-          <td>여자</td>
-          <td>악기 연주</td>
-          <td>부산광역시</td>
+          <td>
+            <input type="checkbox" name="" id="" class="chk" /><%= user.userid
+            %>
+          </td>
+          <td><%= user.email %></td>
+          <td><%= user.gender %></td>
+          <td><%= user.hobby %></td>
+          <td><%= user.region %></td>
         </tr>
-        <tr>
-          <td><input type="checkbox" name="" id="" class="chk" />회원3</td>
-          <td>email03@daum.net</td>
-          <td>여자</td>
-          <td>글쓰기</td>
-          <td>대전광역시</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="" id="" class="chk" />회원4</td>
-          <td>email04@naver.com</td>
-          <td>여자</td>
-          <td>독서</td>
-          <td>서울특별시</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="" id="" class="chk" />회원5</td>
-          <td>email05@daum.net</td>
-          <td>여자</td>
-          <td>서핑</td>
-          <td>제주특별자치도</td>
-        </tr>
+        <% }) }%>
       </table>
       <form action="" id="frm">
         <select name="menu" id="select" style="height: 40px">

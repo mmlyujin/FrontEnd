@@ -2,7 +2,7 @@
 CREATE TABLE tb_users01(
     userid varchar(20) not null,
     email varchar(50) not null,
-    gender varchar(10) not null,
-    hobby varchar(10) not null,
-    region varchar(10) not null
+    gender tinyint(1) NOT NULL DEFAULT '0' COMMENT 'boolean',
+    checkbox tinyint(1) not null DEFAULT '0',
+    region tinyint(1) not null DEFAULT '0'
  );
