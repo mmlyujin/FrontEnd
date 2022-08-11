@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/membercss.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <a href="/login">로그인</a>
+    <a href="/register">회원가입</a>
+    <div class="table-wrap">
+      <h2>Member List</h2>
+      <table>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              name=""
+              id="chkAll"
+              class="chk"
+              onclick="selectAll()"
+            />이름
+          </td>
+          <td>이메일</td>
+          <td>성별</td>
+          <td>취미</td>
+          <td>지역</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" class="chk" />회원1</td>
+          <td>email01@naver.com</td>
+          <td>여자</td>
+          <td>운동하기</td>
+          <td>서울특별시</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" class="chk" />회원2</td>
+          <td>email02@gmail.com</td>
+          <td>여자</td>
+          <td>악기 연주</td>
+          <td>부산광역시</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" class="chk" />회원3</td>
+          <td>email03@daum.net</td>
+          <td>여자</td>
+          <td>글쓰기</td>
+          <td>대전광역시</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" class="chk" />회원4</td>
+          <td>email04@naver.com</td>
+          <td>여자</td>
+          <td>독서</td>
+          <td>서울특별시</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" class="chk" />회원5</td>
+          <td>email05@daum.net</td>
+          <td>여자</td>
+          <td>서핑</td>
+          <td>제주특별자치도</td>
+        </tr>
+      </table>
+      <form action="" id="frm">
+        <select name="menu" id="select" style="height: 40px">
+          <option value="">검색타입 선택</option>
+          <option value="name">이름</option>
+          <option value="email">이메일</option>
+          <option value="gender">성별</option>
+          <option value="hobby">취미</option>
+          <option value="region">지역</option>
+        </select>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="검색어를 입력하세요."
+          autocomplete="off"
+          style="
+            width: 250px;
+            height: 28px;
+            padding: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+          "
+          ;
+        />
+        <button class="member-btn">검색</button>
+      </form>
+    </div>
+    <script src="../script/memberjs.js"></script>
+  </body>
+</html>

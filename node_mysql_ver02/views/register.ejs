@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+  <link rel="stylesheet" href="../css/registercss.css">
+  
+  <title><%= title %></title>
+ 
+  </head>
+<body>
+    <div class="box">
+      <div class="header">
+        <h2>Create Account</h2>
+       </div>
+        <form 
+          onsubmit="return validate()" 
+          method="post"
+          name="frm" 
+          id="frm" 
+          class="frm"
+          enctype="multipart/form-data" >
+          <div class="form-control">
+            <label>아이디</br>
+            <input 
+              type="text" 
+              name="userid" 
+              id="userid" 
+              placeholder="아이디 입력" 
+              style="width:350px"
+              required/>
+              <input type="button" value="중복확인" id="idcheck" onclick="showPopup();">
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>This is Error Message</small>
+          </div>
+          <div class="form-control">
+            <label>비밀번호</label>
+            <input 
+              type="password" 
+              name="passwd" 
+              id="passwd"
+              placeholder="비밀번호 입력"
+              required
+              >
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>This is Error Message</small>
+          </div>
+          <div class="form-control">
+            <label>비밀번호 재입력</label>
+            <input 
+              type="password" 
+              name="passwd2" 
+              id="passwd2"
+              placeholder="비밀번호를 재입력 하세요."
+              required
+              >
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>This is Error Message</small>
+          </div>
+          <div class="form-control">
+            <label>이메일</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="이메일을 입력하세요."
+              required
+            />
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>This is Error Message</small>
+          </div> 
+            <div class="form-control">
+              <label>성별 : </label>
+              <input type="radio" value="F" name="gender" id="gender" style="width:30px;" required>여자
+              <input type="radio" value="M" name="gender" id="gender" style="width:30px;" required>남자
+              <i class="fa-regular fa-circle-check"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>This is Error Message</small>
+            </div>
+            <div class="form-control">
+              <label id="hobby">취미 : </label>
+              <label style="font-size:15px"><input type="checkbox" name="checkbox" value="exercise" id="check"style="width: 30px;" required>운동하기</label> 
+              <label style="font-size:15px"><input type="checkbox" name="checkbox" value="reading" id="check"style="width:30px;">독서</label> 
+              <label style="font-size:15px"><input type="checkbox" name="checkbox" value="writing" id="check"style="width:30px;">글쓰기</label> 
+              <label style="font-size:15px"><input type="checkbox" name="checkbox" value="playingInstrument" id="check"style="width:30px;">악기 연주</label> 
+              <label style="font-size:15px"><input type="checkbox" name="checkbox" value="surf" id="check"style="width:30px;">서핑</label>
+              <i class="fa-regular fa-circle-check"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>This is Error Message</small>
+            </div>
+          <div class="form-control">
+            <label>지역</label>
+            <select name="region" id="select" required>
+              <option value="">선택</option>
+              <option value="seoul">서울특별시</option>
+              <option value="busan">부산광역시</option>
+              <option value="daejeon">대전광역시</option>
+              <option value="jeju">제주특별자치도</option>
+            </select>
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>This is Error Message</small>
+          </div>
+          <div class="form-control">
+              <div class="introduce-box">
+                <label>자기소개서를 작성합니다.</label></br>
+                <textarea id="textarea" required></textarea>
+                <p>입력한 글자수 : 0</p>
+              </div>
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>This is Error Message</small>
+          </div>
+
+          <button type="submit" id="button">회원가입</button></br>
+
+          <a href="/login">로그인 화면으로 이동</a></br>
+          <a href="/memberList">멤버 리스트</a>
+      </form>
+    </div>
+  </div>
+  <script src="../script/registerjs.js"></script>
+</body>
+</html>

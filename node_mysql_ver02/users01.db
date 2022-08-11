@@ -1,0 +1,8 @@
+//이름,이메일,성별,취미,지역
+CREATE TABLE tb_users01(
+    userid varchar(20) not null,
+    email varchar(50) not null,
+    gender varchar(10) not null,
+    hobby varchar(10) not null,
+    region varchar(10) not null
+ );
