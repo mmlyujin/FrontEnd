@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: #000;
+        color: #fff;
+        height: 50px;
+        margin-bottom: 20px;
+      }
+      .header h3 {
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+      nav{
+        
+      }
+      .button {
+        display: flex;
+      }
+      .header_list {
+        list-style: none;
+        display: flex;
+        margin-top: 13px;
+      }
+      .header_list li {
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      .table_wrap {
+        display: center;
+        width: 95%;
+      }
+      table {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        
+      }
+      table tr {
+        height: 50px;
+        text-align: center;
+      }
+      table td:nth-child(2), td:nth-child(3){
+        font-weight: bold; 
+      }
+      table .button {
+        justify-content: center;
+      }
+      table .button button {
+        padding: 5px;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+      .first_tr {
+        color: white;
+        background-color: #2962ff;
+        font-weight: bold;
+      }
+      table .show_tr:hover{
+        background-color: #eee;
+        cursor: pointer;
+      }
+      .dis_none {
+        display: none;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+      }
+      .paging_button {
+        display: flex;
+        margin-left: 20px;
+      }
+      .paging_button div {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #eee;
+        text-align: center;
+        line-height: 33px;
+        cursor: pointer;
+      }
+      .paging_button div:hover{
+        background-color: #000;
+        color: #fff;
+      }
+      .footer_right{
+        margin-right: 25px;
+      }
+      .footer_right select {
+        height: 30px;
+      }
+      .footer_button {
+        height: 30px;
+        padding: 5px;
+        background-color: tomato;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+       <h3>Busanit Academy</h3>
+        <nav>
+         <ul class="header_list">
+          <li>홈으로</li>
+          <li>회원목록</li>
+          <li>게시판관리</li>
+          <li>환경설정</li>
+         </ul>
+        </nav>
+      </div>
+    </header>
+    <nav>
+      <div class="nav">
+        <p style="margin:20px">Home > 회원목록</p>
+        <p style="margin:20px">전체 회원수 : 5명</p>
+      </div>
+    </nav>
+    <main>
+      <div class="table_wrap">
+        <form action="#" >
+        <table>
+          <tr class="first_tr">
+            <td>번호</td>
+            <td>회원이름</td>
+            <td>아이디</td>
+            <td>비밀번호</td>
+            <td>이메일</td>
+            <td>전화번호</td>
+            <td>성별</td>
+            <td>가입일</td>
+            <td>비고</td>
+          </tr>
+          <tr class="show_tr">
+            <td>5</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td class="button">
+              <button><i class="fa-solid fa-pen"></i>수정</button
+              ><button><i class="fa-solid fa-trash-can"></i>삭제</button>
+            </td>
+          </tr>
+          <tr class="show_tr">
+            <td>4</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td class="button">
+              <button><i class="fa-solid fa-pen"></i>수정</button
+              ><button><i class="fa-solid fa-trash-can"></i>삭제</button>
+            </td>
+          </tr>
+          <tr class="show_tr">
+            <td>3</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td class="button">
+              <button><i class="fa-solid fa-pen"></i>수정</button
+              ><button><i class="fa-solid fa-trash-can"></i>삭제</button>
+            </td>
+          </tr>
+          <tr class="show_tr">
+            <td>2</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td class="button">
+              <button><i class="fa-solid fa-pen"></i>수정</button
+              ><button><i class="fa-solid fa-trash-can"></i>삭제</button>
+            </td>
+          </tr>
+          <tr class="show_tr">
+            <td>1</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td class="button">
+              <button><i class="fa-solid fa-pen"></i>수정</button
+              ><button><i class="fa-solid fa-trash-can"></i>삭제</button>
+            </td>
+          </tr>
+          <tr class="dis_none">
+            <td>5</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td>
+              <span type="button">수정</span><span type="button">삭제</span>
+            </td>
+          </tr>
+          <tr class="dis_none">
+            <td>5</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td>
+              <span type="button">수정</span><span type="button">삭제</span>
+            </td>
+          </tr>
+          <tr class="dis_none">
+            <td>5</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td>
+              <span type="button">수정</span><span type="button">삭제</span>
+            </td>
+          </tr>
+          <tr class="dis_none">
+            <td>5</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td>
+              <span type="button">수정</span><span type="button">삭제</span>
+            </td>
+          </tr>
+          <tr class="dis_none">
+            <td>5</td>
+            <td>정유진</td>
+            <td>yujin</td>
+            <td>12345</td>
+            <td>yujin@gmail.com</td>
+            <td>010-1111-1111</td>
+            <td>여</td>
+            <td>2022-08-12</td>
+            <td>
+              <span type="button">수정</span><span type="button">삭제</span>
+            </td>
+          </tr>
+        </form>
+        </table>
+      </div>
+    </main>
+    <div class="footer">
+      <div class="paging_button">
+        <div><i class="fa-solid fa-angles-left"></i></div>
+        <div><i class="fa-solid fa-chevron-left"></i></div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div><i class="fa-solid fa-angle-right"></i></div>
+        <div><i class="fa-solid fa-angles-right"></i></div>
+      </div>
+      <div class="footer_right">
+        <form action="">
+        <select name="" id="select" required>
+          <option value="">회원이름</option>
+          <option value="">아이디</option>
+          <option value="">비밀번호</option>
+        </select>
+        <input type="text" class="input" style="height: 30px;"required>
+        <button class="footer_button" >
+          <i class="fa-solid fa-magnifying-glass"></i>검색
+        </button>
+    </form>
+      </div>
+    </div>
+  </body>
+</html>
