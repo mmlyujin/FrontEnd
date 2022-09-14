@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "userid": "busanit",
+    "passwd": "1234",
+    "gender": "F",
+    "regdate": "2022-09-01"
+  },
+  {
+    "id": 2,
+    "userid": "seoulit",
+    "passwd": "12345",
+    "gender": "F",
+    "regdate": "2022-09-02"
+  },
+  {
+    "id": 3,
+    "userid": "daeguit",
+    "passwd": "123",
+    "gender": "F",
+    "regdate": "2022-09-12"
+  },
+  {
+    "id": 4,
+    "userid": "danbicute",
+    "passwd": "123345",
+    "gender": "F",
+    "regdate": "2022-09-11"
+  }
+]

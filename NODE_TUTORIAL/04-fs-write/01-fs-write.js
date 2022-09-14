@@ -27,7 +27,7 @@ fs.appendFile("./file.txt", appendStr, (err) => {
 });
 
 //fs.unlink(지울파일이름,콜백);
-if()
+
 fs.unlink("./file.txt", (err) => {
   if (err) {
     throw err;
