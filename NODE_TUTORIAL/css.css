@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-rows: 100px 800px 100px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "aa", "bc", "dd";
+}
+
+.item1 {
+  background-color: #000;
+  grid-area: a;
+}
+.item3 {
+  background-color: #fff;
+  grid-area: b;
+}
+.item4 {
+  background-color: orange;
+  grid-area: c;
+}
+.item5 {
+  background-color: black;
+  grid-area: d;
+}
