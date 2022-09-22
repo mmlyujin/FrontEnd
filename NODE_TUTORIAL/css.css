@@ -1,23 +1,27 @@
-.container {
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
   display: grid;
-  grid-template-rows: 100px 800px 100px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "aa", "bc", "dd";
+  grid-template-rows: 100px auto 50px;
+  grid-template-columns: 3fr 1fr; /* 2칸으로 나눠서 왼쪽 오른쪽 3:1  비율로 */
+  grid-template-areas: "header header" "main side" "footer footer";
+  /**/
 }
 
-.item1 {
+header {
   background-color: #000;
-  grid-area: a;
+  grid-area: header;
 }
-.item3 {
+main {
   background-color: #fff;
-  grid-area: b;
+  grid-area: main;
 }
-.item4 {
+aside {
   background-color: orange;
-  grid-area: c;
+  grid-area: side;
 }
-.item5 {
+.footer {
   background-color: black;
-  grid-area: d;
+  grid-area: footer;
 }

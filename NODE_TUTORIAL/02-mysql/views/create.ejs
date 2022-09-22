@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/createTB">자동으로 테이블 생성</a>
+    <a href="/dropTB">자동으로 테이블 삭제</a>
+    <a href="/selectAll">회원전체보기</a>
+
+    <h3>가입된 회원은</h3>
+    <% for(let i=0; i < result.length; ++i){ %>
+        번호 : <%= i + 1%>
+            아이디 : <%= result[i].userid%>
+                비밀번호 : <%=result[i].passwd%><br>
+                    <% } %>
+
+</body>
+
+</html>
