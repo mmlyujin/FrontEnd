@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>
+        Document
+    </title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            /*사각형 화면 가운데 정렬*/
+        }
+
+        input {
+            width: 100%;
+            outline: none;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>수정페이지</h1>
+        <a href="/userList">목록</a>
+        <form action="/upUser" method="post" autocomplete="off">
+            <input type="hidden" name="reg_id" value="<%= result[0].reg_id %>">
+            Username
+            <input value="<%= result[0].username %>" type="text" maxlength="10" name="username" required>
+            Password
+            <input value="<%= result[0].passwd %>" type="password" maxlength="20" name="passwd" required>
+            <input type="submit" value="Modify">
+        </form>
+    </div>
+</body>
+
+</html>

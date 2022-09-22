@@ -12,12 +12,12 @@
 
 <body>
     <div class="container">
+        <a href="/">메인 사이트</a>
+        <a href="/addUser">추가</a>
         <table>
             <tr>
                 <td>Num.</td>
                 <td>Username.</td>
-                <td>Password.</td>
-                <td>regdate.</td>
                 <td>-</td>
             </tr>
             <% if(result=="" ) { %>
@@ -29,15 +29,9 @@
                             <td>
                                 <%=result[i].reg_id%>
                             </td>
-                            <td>
-                                <%=result[i].username%>
-                            </td>
-                            <td>
-                                <%=result[i].passwd%>
-                            </td>
-                            <td>
-                                <%=result[i].regdate%>
-                            </td>
+                            <td><a href="/userView/<%=result[i].reg_id%>">
+                                    <%=result[i].username%>
+                                </a></td>
                             <td>
                                 <a href="/upUser/<%=result[i].reg_id%>">Update</a>
 

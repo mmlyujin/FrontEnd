@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>그룹웨어 | 부산아이티 솔루션</title>
+    <style>
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            max-width: 800px;
+            text-align: center;
+
+        }
+
+        button {
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        button.left {
+            background-color: #37b09b;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        button.right {
+            background-color: #e8edef;
+            color: #95afb7;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 70px;
+            /*같은 줄 일 때 서로 간격줌 */
+
+        }
+
+        h4 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h4>부산아이티 아카데미</h4>
+            <h1>부산아카데미 그룹웨어 솔루션<br>그룹웨어 프로</h1>
+            <a href="/userList" onclick="return confirm('페이지를 이동합니다.');"><button class="left">회원관리 프로그램</button></a>
+            <button class="right">게시판 관리 프로그램</button>
+        </div>
+    </div>
+</body>
+
+</html>
