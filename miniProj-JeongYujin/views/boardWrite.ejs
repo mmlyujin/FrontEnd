@@ -1,0 +1,14 @@
+<%- include('inc/_header')%>
+
+    <body>
+        <div class="container">
+            <%- include('inc/_menubar')%>
+                <form action="/boardManage">
+                    <input type="text" name="board_title" maxlength="50">
+                    <input type="text" name="board_content" maxlength="500">
+                    <input type="submit" value="작성 완료">
+                </form>
+        </div>
+    </body>
+
+    <%- include('inc/_footer')%>

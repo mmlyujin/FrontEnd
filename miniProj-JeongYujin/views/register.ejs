@@ -1,0 +1,73 @@
+<%- include('inc/_header')%>
+
+    <body>
+        <div class="container">
+            <%- include('inc/_menubar')%>
+                <div class="reg_form_wrap">
+                    <div class="reg_form">
+                        <form id="register" method="post" action="/register">
+                            <div class="row_box_title">
+                                <h2>회원가입</h2>
+                            </div>
+                            <div class="row_box">
+                                <p>(*표시는 필수입력 항목입니다.)</p>
+                            </div>
+                            <div class="row_box">
+                                <h4><label for="id">아이디<i class="fa-solid fa-asterisk"></i></label></h4>
+                                <input type="text" id="id" name="id" maxlength="20" required autocomplete="off"
+                                    placeholder="아이디">
+                            </div>
+                            <div class="row_box">
+                                <h4><label for="passwd">비밀번호<i class="fa-solid fa-asterisk"></i></label></h4>
+                                <input type="password" id="passwd" name="passwd" maxlength="4h40" required
+                                    autocomplete="off" placeholder="비밀번호">
+                            </div>
+                            <div class="row_box">
+                                <h4><label for="name">이름<i class="fa-solid fa-asterisk"></i></label></h4>
+                                <input type="text" id="name" name="name" maxlength="20" required autocomplete="off"
+                                    placeholder="이름">
+                            </div>
+                            <div class="row_box">
+                                <h4><label for="email">이메일<i class="fa-solid fa-asterisk"></i></label></h4>
+                                <input type="text" class="email" id="email" name="email" maxlength="50" required
+                                    autocomplete="off" placeholder="ex ) ****@****.com">
+                                <!-- &nbsp;@&nbsp;
+                                 <input type="text" class="email_domain" id="email_domain" name="email_domain"
+                                    maxlength="4h40">
+                                <select name="select_email" class="select_email" onchange="selectBoxChange(this.value)">
+                                    <option value="">직접 입력</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="daum.net">daum.net</option>
+                                    <option value="nate.com">nate.com</option>
+                                </select>  -->
+                            </div>
+                            <div class="reg_submit">
+                                <input type="submit" value="회원가입" id="reg">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        <script>
+            // //option 값 input에 넘기기
+            // let selectBoxChange = function (value) {
+            //     $("#email_domain").val(value);
+            // }
+            // $("#reg").click(function () {//reg 클릭하면
+            //     $.ajax({
+            //         url: '/register',
+            //         method: 'post',
+            //         contentType: "application/json",
+            //         data: JSON.stringify({ result }),
+            //         success: function (result) {
+            //             console.log("db 보냄");
+            //         }
+            //     })
+
+            // })
+
+        </script>
+    </body>
+
+    <%- include('inc/_footer')%>

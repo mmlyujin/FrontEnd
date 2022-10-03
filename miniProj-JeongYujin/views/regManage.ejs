@@ -1,0 +1,79 @@
+<%- include('inc/_header')%>
+
+    <body>
+        <div class="container">
+            <%- include('inc/_menubar')%>
+                <div class="reg_container">
+                    <div class="reg_table">
+                        <div class="reg_nav" style="margin-bottom: 10px;">
+                            <h4>메인 > 회원 관리</h4>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>No.</td>
+                                <td>아이디</td>
+                                <td>비밀번호</td>
+                                <td>회원이름</td>
+                                <td>이메일</td>
+                                <td>가입일</td>
+                                <td>수정/삭제</td>
+                            </tr>
+                            <% if(result=="" ){ %>
+                                <tr>
+                                    <td colspan="7">등록된 사용자가 없습니다.</td>
+                                </tr>
+                                <% }else{ for(let i=0;i<result.length;++i){ %>
+                                    <tr>
+                                        <td>
+                                            <%= result[i].regManage_idx%>
+                                                <!-- result[i]값 뒤에는 mysql의 컬럼명을 적는다. -->
+                                        </td>
+                                        <td>
+                                            <%= result[i].regManage_id%>
+                                        </td>
+                                        <td>
+                                            <%= result[i].regManage_passwd%>
+                                        </td>
+                                        <td>
+                                            <%= result[i].regManage_name%>
+                                        </td>
+                                        <td>
+                                            <%= result[i].regManage_email%>
+                                        </td>
+                                        <td>
+                                            <%= result[i].regManage_regDate%>
+                                        </td>
+                                        <td>
+                                            <a href="/upUser/<%= result[i].regManage_idx %>"><i
+                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="/delUser/<%= result[i].regManage_idx %>"
+                                                onclick="return confirm('삭제하시겠습니까?');"><i
+                                                    class="fa-solid fa-trash-can"></i></a>
+                                        </td>
+                                    </tr>
+                                    <% } } %>
+                        </table>
+                        <div class="tbl_bottom">
+                            <div class="pagination">
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                            </div>
+                            <div class="search_box">
+                                <select name="select" id="" required>
+                                    <option value="name">회원이름</option>
+                                    <option value="id">아이디</option>
+                                    <option value="email">이메일</option>
+                                </select>
+                                <input type="search" class="search" required>
+                                <button class="btn">검색</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </body>
+    <%- include('inc/_footer')%>

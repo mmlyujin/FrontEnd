@@ -1,0 +1,41 @@
+<%- include('inc/_header')%>
+
+    <body>
+        <div class="container">
+            <%- include('inc/_menubar')%>
+                <div class="board_table_wrap">
+                    <table>
+                        <tr>
+                            <th>선택</th>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                        </tr>
+
+                        <% if(result=="" ){ %>
+                            <tr>
+                                <td colspan="5">등록된 사용자가 없습니다.</td>
+                            </tr>
+                            <% }else{ for(let i=0;i<result.length;++i){ %>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <%= result[i].idx%>
+                                    </td>
+                                    <td>
+                                        <%= result[i].title%>
+                                    </td>
+                                    <td>
+                                        <%= result[i].name%>
+                                    </td>
+                                    <td>
+                                        <%= result[i].%>
+                                    </td>
+                                </tr>
+                    </table>
+                </div>
+        </div>
+    </body>
+
+    <%- include('inc/_footer')%>

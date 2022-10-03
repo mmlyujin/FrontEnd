@@ -1,0 +1,110 @@
+table {
+  border-collapse: collapse;
+}
+
+.reg_container {
+  padding: 20px 80px;
+}
+
+.reg_table {
+  width: 100%;
+}
+
+.reg_table tr {
+  height: 60px;
+  text-align: center;
+  /*텍스트 중앙으로*/
+}
+
+.reg_table tr:first-child {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-top: 2px solid black;
+}
+.reg_table tr {
+  background-color: white;
+  color: black;
+  border-top: 1px solid gainsboro;
+}
+
+.reg_table td:nth-child(1) {
+  width: 5%;
+}
+
+.reg_table td:nth-child(2) {
+  width: 10%;
+}
+
+.reg_table td:nth-child(3) {
+  width: 10%;
+}
+
+.reg_table td:nth-child(4) {
+  width: 10%;
+}
+
+.reg_table td:nth-child(5) {
+  width: 20%;
+}
+
+.reg_table td:nth-child(6) {
+  width: 10%;
+}
+
+.reg_table td:nth-child(7) {
+  width: 5%;
+}
+.reg_table td a {
+  padding: 5px;
+}
+.reg_table td a:hover {
+  color: #b7c4cf;
+}
+.tbl_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.pagination {
+  margin-top: 10px;
+}
+
+.tbl_bottom a {
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #b7c4cf;
+  color: whitesmoke;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tbl_bottom a:hover {
+  background-color: white;
+  color: #b7c4cf;
+}
+
+.search_box select,
+.search_box input,
+.search_box .btn {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tbl_bottom .btn {
+  width: 80px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: #b7c4cf;
+  color: whitesmoke;
+  font-size: 15px;
+}
+.tbl_bottom .btn:hover {
+  background-color: whitesmoke;
+  color: #b7c4cf;
+}
+.search_box input {
+  height: 39px;
+}
