@@ -5,7 +5,7 @@
 */
 
 const names = ["Kim", "Lee", "Park"];
-const idx = names.findIndex((n) => n == "Park");
+const  = names.findIndex((n) => n == "Park");
 console.log(idx); //2를 출력
 
 //객체 안에 몇 개 있는지??

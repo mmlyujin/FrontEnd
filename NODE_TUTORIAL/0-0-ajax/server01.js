@@ -23,7 +23,7 @@ app.post("/checkID", (req, res) => {
   if (users.userid == req.body.userid) {
     msg = "No";
   }
-  res.send(msg); //server -> ajax => 결과값을 전송
+  res.send(); //server -> ajax => 결과값을 전송
 });
 
 app.listen(3000, () => console.log("Server Running : 3000")); //서버 설정
