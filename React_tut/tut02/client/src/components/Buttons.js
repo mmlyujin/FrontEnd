@@ -1,24 +1,27 @@
+import { useState } from "react";
+
 function Buttons() {
-  let str = "Busan it";
-  function press() {
-    //매개변수 X
-    alert("클릭 되었습니다.");
-  }
+  const [region, setRegion] = useState("busan");
+  const [counter, setCounter] = useState(0);
 
-  function clicked(str) {
-    //매개변수 O
-    alert(str);
+  function changeRegion() {
+    setRegion("Seoul"); //바꾸는 값은 set
   }
-
+  function add() {
+    setCounter(counter + 1);
+  }
+  function sub() {
+    setCounter(counter - 1);
+  }
   return (
-    <div style={{ textAlign: "center" }}>
-      <button className="btn01" onClick={press}>
-        click :D
-      </button>
+    <div>
+      {/* 버튼 누르면 글자 초기값을 바꾸는 event(hook : busan -> Seoul) */}
+      <p>{region}</p>
+      <button onClick={changeRegion}>지역 바꾸기</button>
       <p></p>
-      <button className="btn01" onClick={() => clicked(str)}>
-        click :D :0
-      </button>
+      <h2>counter : {counter}</h2>
+      <button onClick={add}>ADD</button>
+      <button onClick={sub}>SUB</button>
     </div>
   );
 }
