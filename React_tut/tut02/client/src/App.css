@@ -1,9 +1,17 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+select,
+input[type="text"] {
+  border: 1px solid #555;
+  width: 100px;
+  padding: 6px 4px;
+  margin-bottom: 10px;
 }
 
-img {
-  width: 300px;
+form {
+  padding: 20px;
 }
