@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*html div tag 기본적으로 여백 존재 그 여백은 무시하고 내가 정한 크기대로*/
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f7f7f7;
+  font-size: 14px;
+}
+
+.container {
+  /*가운데정렬*/
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #fff;
+  box-shadow: 0 0 2px #ccc;
+  padding: 10px;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /*넓이 값을 넘어가면 밑으로 배치*/
+}
+
+.box {
+  width: 24%;
+  background-color: #fff;
+  box-shadow: 0 0 2px #ccc;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+.img-container {
+  overflow: hidden; /*box넘어가지 않게*/
+}
+
+.img-container img {
+  width: 300px;
+  height: 250px;
+  transition: 0.3s; /*마우스 벗어날 때 부드럽게*/
+  cursor: pointer;
+}
+
+.img-container img:hover {
+  transform: scale(1.2); /*마우스 올리면 커지게 */
+  transition: 0.3s; /*부드럽게 움직임*/
+}
+
+p.read {
+  text-align: right;
+  cursor: pointer;
+  color: #f00;
+}
+
+/*************************************** */
+
+.loading {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid #ffc2c2;
+  border-top: tomato;
+  animation: spinner 0.5s infinite;
+  margin: 0 auto;
+}
