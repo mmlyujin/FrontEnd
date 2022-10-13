@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  background-color: aliceblue;
+  padding: 16px 32px;
+}
+
+.navbar a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  padding: 30px;
+}
+
+/* 누른 link 진하게 보임 */
+nav a.active {
+  font-weight: bold;
+}
+
+button {
+  outline: 0;
+  padding: 9px 10px;
+  border: none;
+  background-color: lightblue;
+  cursor: pointer;
+  margin-left: 1px;
+  margin-top: 10px;
+}
+
+input {
+  outline: 0;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.nested-navbar {
+  margin-top: 20px;
+}
+
+.nested-navbar a {
+  margin-right: 16px;
+}
+
+section {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+tr {
+  height: 45px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+tr:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.featured table tr:first-child {
+  background-color: #f7f7f7;
+}
+
+.featured table tr td:nth-child(1) {
+  width: 10%;
+}
+.featured table tr td:nth-child(2) {
+  width: 10%;
+}
+.featured table tr td:nth-child(4) {
+  width: 10%;
+}
+.featured table tr td:nth-child(5) {
+  width: 10%;
+}
+.featured table tr td:nth-child(6) {
+  width: 10%;
+}
+.featured table tr td:nth-child(7) {
+  width: 10%;
+}
+.featured table tr td:nth-child(8) {
+  width: 10%;
+}
+
+select {
+  outline: 0;
+  width: 100%;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.bottom button {
+  background-color: #eee;
+}
+
+header {
+  padding: 15px 10px 15px 0;
+  text-align: right;
+}
