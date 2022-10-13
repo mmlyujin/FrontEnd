@@ -19,6 +19,8 @@ import Products from "./components/pages/Products";
 import Featured from "./components/pages/Featured";
 import News from "./components/pages/News";
 import Admin from "./components/pages/Admin";
+import Users from "./components/pages/Users";
+import UserDetail from "./components/pages/UserDetail";
 
 function App() {
   return (
@@ -35,10 +37,13 @@ function App() {
           <Route path="orders" element={<Orders />} />
           {/* <Route> 중첩메뉴(nested)는 Route로 감싸줘야 함 </Route> */}
           <Route path="products" element={<Products />}>
-            <Route path="featured" element={<Featured />} />
+            <Route index element={<Featured />}></Route>
             <Route path="news" element={<News />} />
           </Route>
-          <Route path="admin" element={<Admin />} />
+          <Route path="admin" element={<Admin />}>
+            <Route index element={<Users />} />
+            <Route path="userDetail/:id" element={<UserDetail />} />
+          </Route>
 
           <Route path="*" element={<NotFound />} />
         </Routes>
