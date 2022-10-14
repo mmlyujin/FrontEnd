@@ -21,7 +21,7 @@ app.use(cors()); //통신문제 안 생기게 하기 위해서
 //react js -> nodejs 사용할 때 : /api/
 //post 는 전달받을 데이터가 있을 때 사용
 app.post("/api/users/addUser", (req, res) => {
-  //console.log(req.body.userid) 를 줄여서 쓰는 방법
+  //req.body.userid를 줄여서 쓰는 방법
   const { userid, passwd, username } = req.body;
   let sql = "insert into member values(null,?,?,?,now());";
   db.query(sql, [userid, passwd, username], (err) => {
@@ -42,6 +42,16 @@ app.get("/api/users", (req, res) => {
     } else {
       console.log(result);
       res.send(result);
+    }
+  });
+});
+
+app.delete("/api/users/deleteUser/:id", (req, res) => {
+  //console.log(req.params.id);
+  let sql = "delete from member where id=?;";
+  db.query(sql, [req.params.id], (err) => {
+    if (err) {
+      throw err;
     }
   });
 });
