@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.loading {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%); /* 화면 정가운데 */
+}
+
+.loading p {
+  animation-name:loadingPrag;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loadingPrag {
+  0% {
+    font-size: 30px;
+    color: rgb(16, 148, 141);
+  }
+
+  100% {
+    font-size: 70px;
+    color:#000;
+  }
+}
+
+.albums-container { /*flex, grid 박스를 감싸고 있는 div*/
+  width:800px;
+  display: grid;
+  /*가로에 몇개 넓이 얼마로 배치할 건지*/
+  grid-template-columns: repeat(4, 24%);
+  row-gap:10px; /*세로줄 여백*/
+  column-gap: 1%; /*가로줄 여백*/
+  margin:50px auto;
+}
+
+.album {
+  width:100%;
+  height:auto;
+  padding:10px;
+  box-shadow: 0 0 5px rgb(202, 202, 202);
+}
+
+/* img {
+  width:100%;
+} */
+
+img {
+  width:300px;
+}
