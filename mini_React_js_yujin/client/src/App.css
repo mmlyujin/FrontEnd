@@ -9,7 +9,7 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 28%);
-  row-gap: 30px;
+  row-gap: 10px;
   column-gap: 4%;
   margin: 50px auto;
 }
@@ -28,5 +28,9 @@ img {
 }
 
 .heritage-address {
+  margin: 10px;
+}
+
+.content-toggle-btn {
   margin: 10px;
 }

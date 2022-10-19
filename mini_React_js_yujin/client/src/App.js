@@ -2,7 +2,6 @@ import "./App.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Tours from "./components/Tours";
-import Content from "./components/Content";
 
 function App() {
   const URL =
@@ -22,7 +21,6 @@ function App() {
   return (
     <div>
       <Tours tours={tours} />
-      <Content tours={tours} />
     </div>
   );
 }
