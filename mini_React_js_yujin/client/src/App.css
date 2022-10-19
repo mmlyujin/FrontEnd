@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heritages-container {
+  width: 1280px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 28%);
+  row-gap: 30px;
+  column-gap: 4%;
+  margin: 50px auto;
+}
+
+.heritage {
+  border: 1px solid lightgrey;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+}
+
+.heritage-name {
+  margin: 10px;
+}
+
+.heritage-address {
+  margin: 10px;
+}
