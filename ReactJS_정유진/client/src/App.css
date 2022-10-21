@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li {
+  list-style: none;
+}
+
+.heritages-container {
+  width: 1280px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 30%);
+  row-gap: 30px;
+  column-gap: 4%;
+  margin: 50px auto;
+}
+
+.heritage {
+  border: 1px solid lightgrey;
+}
+
+.heritage-image {
+  width: 382px;
+  height: 300px;
+  overflow: hidden;
+  /* 오버플로우 히든은 감싸는 애한테 줘야함. */
+}
+.heritage-image img {
+  width: 100%;
+  height: 300px;
+}
+.heritage-image img:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+  filter: brightness(70%);
+}
+
+.heritage-name,
+.heritage-address {
+  margin: 10px;
+}
+
+.navbar-container {
+  justify-content: space-between;
+  display: flex;
+  padding: 20px;
+  height: 150px;
+}
+
+.navLeft-wrap {
+  cursor: pointer;
+}
+
+.navRight-wrap ul {
+  display: flex;
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.navRight-wrap ul li {
+  cursor: pointer;
+}
+
+.navRight-wrap ul li::after {
+  content: "|";
+  color: #ccc;
+  margin: 0 50px;
+}
+.navRight-wrap ul li:last-child::after {
+  content: "";
+  margin-right: 0;
+}
+
+.nav-image {
+  width: 1920px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav-image img {
+  position: absolute;
+  top: -70%;
+  width: 100%;
+}
+
+.main-text h1 {
+  text-align: center;
+  margin: 70px;
+}
+.content-container {
+  padding: 50px;
+}
+
+.content-main {
+  display: flex;
+}
+
+.content-main img {
+  width: 500px;
+  height: 400px;
+}
+
+.content-text h1 {
+  margin-bottom: 10px;
+}
+
+.content-text hr {
+  border: 0;
+  border-top: 4px solid lightseagreen;
+  width: 300px;
+  margin-bottom: 70px;
+}
+
+.content-desc {
+  margin-left: 20px;
+}
+.content-address,
+.content-myonjuk,
+.content-detail {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.content-detail {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.loading-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  animation: loading 1s 0s linear infinite;
+  /* 이벤트명 , 반복시간, 딜레이시간, 부드럽게, 이벤트무한반복 */
+}
+
+.loading span:nth-child(1) {
+  animation-delay: 0s;
+  background-color: #cdfcf6;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+  background-color: #bccef8;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+  background-color: #98a8f8;
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
