@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload List - Users</title>
+</head>
+
+<body>
+  <h1>File Upload List - Users</h1>
+  <a href="/add">Add User</a>
+  <table border="1" style="width:100%">
+    <tr>
+      <td>No.</td>
+      <td>Image.</td>
+      <td>Username.</td>
+      <td>Email.</td>
+      <td>Phone.</td>
+      <td>-</td>
+    </tr>
+    <% if(result.length==0){ %>
+
+      <h1>등록된 자료가 없습니다.</h1>
+      <% }else { result.forEach((res,key)=>{%>
+        <tr>
+          <td>
+            <%=res.id%>
+          </td>
+          <td><img src="<%=res.image%>" style="width:50px"></td>
+          <td>
+            <%=res.username%>
+          </td>
+          <td>
+            <%=res.phone%>
+          </td>
+          <td>
+            <%=res.regdate%>
+          </td>
+          <td>
+            <a href="/delete/<%res.id%>" onClick="return confirm('Delete?');">Delete</a>
+          </td>
+        </tr>
+  </table>
+  <% }) %>
+    <% } %>
+</body>
+
+</html>

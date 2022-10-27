@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Multer Upload</title>
+</head>
+
+<body>
+    <h1>Single Multer Upload</h1>
+    <form method="post" enctype="multipart/form-data" action="/uploadFile">
+        <!-- file 배열(이름,경로,용량,타입....)
+            name 값 주의! 
+            enctype="multipart/form-data" 필수
+        -->
+        <input type="file" name="attach" required />
+        <input type="submit" value="Upload">
+    </form>
+</body>
+
+</html>

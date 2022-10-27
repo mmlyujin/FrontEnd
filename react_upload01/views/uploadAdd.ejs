@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload Add - Users</title>
+</head>
+<body>
+  <h1>File Upload Add - Users</h1>
+  <a href="/">Users List </a>
+  <form method="post" enctype="multipart/form-data" action="/add">
+    <div>
+      Username <input type="text" name="username" required />
+    </div>
+    <div>
+      Email <input type="text" name="email" required />
+    </div>
+    <div>
+      Phone <input type="text" name="phone" required />
+    </div>
+    <div>
+      Image <input type="file" name="attach" required />
+    </div>
+    <div>
+      <input type="submit" value="Register" />
+    </div>
+  </form>
+</body>
+</html>
