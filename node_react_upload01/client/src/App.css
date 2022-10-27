@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: aliceblue;
+  padding: 20px 10px;
+}
+
+.section {
+  padding: 20px 10px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.box {
+  border: 1px solid #eee;
+  width: 300px;
+  margin: 10px;
+}
+
+.box img {
+  width: 300px;
+}
